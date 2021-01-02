@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Unique;
@@ -10,24 +9,50 @@ use Illuminate\Validation\Rules\Unique;
 class CartController extends Controller
 {
 
-        public function add(Product $product)
+        public function addToCart(Request $request)
         {
-        // add the product to cart
-        \Cart::session(auth()->id())->add(array(
-            'id' =>  uniqid($product->id),
-            'name' => $product->name,
-            'price' => $product->price,
-            'quantity' => 4,
-            'attributes' => array(),
-            'associatedModel' => $product,
-        ));
+        // add the re$request to cart
+        \Cart::add([
+            'id' =>  $request->id,
+            'name' => $request->name,
+            'price' => $request->price,
+            'quantity' => $request->quantity,
+            'attributes' => array(
+                'photo'=> $request->photo,
+            )
+
+        ]);
+        session()->flash('message','product added successfully!');
         return redirect()->route('cart.list');
         }
 
     public function cartList()
     {
-        dd('ok');
+       $cartItems = \Cart::getContent();
+       //dd($cartItems);
+       return view('cart',compact('cartItems'));
     }
-
-
+public function updateCart(Request $request)
+{
+    \Cart::update(
+        $request->id,
+        [
+        'quantity'=>[
+        'relative'=> false,
+        'value'=> $request->quantity
+        ],
+           ]
+    );
+    return redirect()->route('cart.list')->with('message','Item updated successfully!');
+        }
+        public function removeCart(Request $request)
+        {
+            \Cart::remove($request->id);
+         return redirect()->route('cart.list')->with('message','Product removed successfully!');
+        }
+        public function clearCart()
+        {
+            \Cart::clear();
+            return redirect()->route('cart.list')->with('message','Cart cleared successfully!');
+        }
 }
