@@ -1,14 +1,9 @@
-<div class="categori-search-wrap">
-    <div class="search-wrap-3">
-        <form action="{{route('product.search')}}" method="POST">
-            @csrf
-            <input placeholder="Search Products..." type="text" name="term">
-            <button><i class="lnr lnr-magnifier"></i></button>
-        </form>
+<div class="input-group input-group-sm" style="width: 150px;">
+    <input type="text" wire:model="searchTerm" class="form-control float-right" placeholder="Search Product........">
+
+    <div class="input-group-append">
+      <button type="submit" class="btn btn-default">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
-    <ul class="list-group">
-        @foreach ($products as $product)
-    <li class="list-group-item">{{$product->name}}</li>
-        @endforeach
-    </ul>
-</div>
+  </div>
