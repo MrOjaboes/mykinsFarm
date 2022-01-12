@@ -44,23 +44,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="./index.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>Customers</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                              document.getElementById('logout-form').submit();">
-                 Logout
-             </a>
 
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                 @csrf
-             </form>
-              </li>
-              
+
             </ul>
           </li>
 
@@ -183,7 +173,18 @@
 
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+             <i class="far fa-gear nav-icon"></i>
+             <p>Logout</p>
+         </a>
 
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+             @csrf
+         </form>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

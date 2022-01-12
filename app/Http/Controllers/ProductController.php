@@ -10,25 +10,22 @@ class ProductController extends Controller
 {
    public function index()
    {
-       return view('Admin.index');
+       return view('Admin.Products.index');
    }
    public function addProduct()
    {
-       return view('Admin.addProduct');
+       return view('Admin.Products.addProduct');
    }
-   public function storeProduct()
-   {
-       return view('Admin.addProduct');
-   }
+
    public function details(Product $product)
    {
       // dd($product);
-       return view('Admin.details',compact('product'));
+       return view('Admin.Products.details',compact('product'));
    }
    public function edit(Product $product)
    {
       // dd($product);
-       return view('Admin.edit',compact('product'));
+       return view('Admin.Products.edit',compact('product'));
    }
    public function update(Product $product, Request $request)
         {
