@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<x-navbar></x-navbar>
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -10,7 +11,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ route('products') }}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('products') }}">Products</a></li>
                             <li class="breadcrumb-item active">Add Product</li>
                         </ol>
                     </div>
@@ -28,7 +29,7 @@
                         <!-- general form elements -->
                         <div class="card card-success">
                             <div class="card-header">
-                                <h3 class="card-title">Quick Example</h3>
+                                <h3 class="card-title">Add New Product</h3>
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->

@@ -1,5 +1,5 @@
-<div>
-    <form wire:submit.prevent="addProduct">
+
+    <form wire:submit.prevent="addProduct" enctype="multipart/form-data">
         <div class="card-body">
             <div class="form-group">
                 <label for="exampleInputEmail1">Product Title</label>
@@ -13,10 +13,16 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Product Caption</label>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" wire:model="photo">
-                    <label class="custom-file-label" for="customFile">Choose file</label>
-                </div>
+                     <input type="file" class="form-control" wire:model="photo">
+               </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Product Category</label>
+              <select wire:model="state.category_id" class="form-control" id="">
+                <option value="">----Select Category----</option>
+                  @foreach ($categories as $cat)
+                          <option value="{{$cat->id}}">{{$cat->title}}</option>
+                  @endforeach
+              </select>
             </div>
             <div class="form-group">
                 <label for="exampleInputFile">Product Description</label>
@@ -30,4 +36,4 @@
             <button type="submit" class="btn btn-success">Add Product</button>
         </div>
     </form>
-</div>
+

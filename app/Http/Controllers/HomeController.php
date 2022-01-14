@@ -25,8 +25,16 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function profile()
+    {
+        return view('Admin.Profile.index');
+    }
     public function customers()
     {
         return view('Admin.Customers.index');
+    }
+    public function categories()
+    {
+        return view('Admin.categories.index');
     }
 }

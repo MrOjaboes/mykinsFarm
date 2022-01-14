@@ -15,8 +15,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Responsive Hover Table</h3>
-
+              <h3 class="card-title"><a href="{{route('add-product')}}" class="btn btn-outline-success">Add Product</a></h3>
               <div class="card-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
                   <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -37,7 +36,8 @@
                      <th>Title</th>
                     <th>Date Added</th>
                     <th>Price</th>
-                    <th>Photo</th>
+                    <th>Caption</th>
+                    <th>Category</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -49,9 +49,10 @@
                     <td><img id="img" src="{{ asset('/storage/products/' .$product->photo) }}"
                         width="100px" class="img-circle" alt="">
                 </td>
+                    <td>{{$product->category->title}}</td>
                 <td><a href="{{route('product-details',$product->id)}}" class="btn btn-outline-info">Details</a>
                  <a href="{{route('product-edit',$product->id)}}" class="btn btn-outline-success">Edit</a>
-                  <a href="" class="btn btn-outline-danger">Delete</a></td>
+                  <a href="" wire:click.prevent="delete({{ $product->id }})" class="btn btn-outline-danger">Delete</a></td>
                   </tr>
                  @endforeach
 

@@ -12,4 +12,9 @@ class Index extends Component
         $products = Product::all();
         return view('livewire.product.index',compact('products'));
     }
+    public function delete($id)
+    {
+        Product::find($id)->delete();
+        return redirect()->route('products')->with('message','Product Deleted Successfully!');
+    }
 }

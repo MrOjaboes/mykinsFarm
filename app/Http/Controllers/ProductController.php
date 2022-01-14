@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -29,7 +30,8 @@ class ProductController extends Controller
    public function edit(Product $product)
    {
       // dd($product);
-       return view('Admin.Products.edit',compact('product'));
+      $categories = Category::all();
+       return view('Admin.Products.edit',compact('product','categories'));
    }
    public function update(Product $product, Request $request)
         {
@@ -44,8 +46,8 @@ class ProductController extends Controller
             $product->update([
                 'title' => $request->title,
                 'price' => $request->price,
-                'photo' => $fileName,
                 'description' => $request->description,
+                'category_id' => $request->category_id,
             ]);
             return redirect()->route('products')->with('message','Product Updated Successfully!');
    }

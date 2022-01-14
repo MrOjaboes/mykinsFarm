@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<x-navbar></x-navbar>
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -51,6 +52,15 @@
                                             <input type="file" class="custom-file-input" name="photo">
                                             <label class="custom-file-label" for="customFile">Choose file</label>
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Product Category</label>
+                                      <select name="category_id" class="form-control" id="">
+                                        <option value="{{$product->category_id}}">{{$product->category->title}}</option>
+                                          @foreach ($categories as $cat)
+                                                  <option value="{{$cat->id}}">{{$cat->title}}</option>
+                                          @endforeach
+                                      </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputFile">Product Description</label>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,15 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',['products' => Product::all()]);
 });
 
 Auth::routes();
+Route::group(['middleware' => ['auth']], function () {
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin')->middleware('Admin');
+Route::get('/admin/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('admin.profile')->middleware('Admin');
+Route::get('/admin/categories', [App\Http\Controllers\HomeController::class, 'categories'])->name('categories')->middleware('Admin');
+Route::get('/admin/customers', [App\Http\Controllers\HomeController::class, 'customers'])->name('customers')->middleware('Admin');
+Route::get('/admin/products', [App\Http\Controllers\ProductController::class, 'index'])->name('products')->middleware('Admin');
+Route::get('/admin/product', [App\Http\Controllers\ProductController::class, 'addProduct'])->name('add-product')->middleware('Admin');
+Route::get('/admin/{product}/product-details', [App\Http\Controllers\ProductController::class, 'details'])->name('product-details')->middleware('Admin');
+Route::get('/admin/{product}/edit', [App\Http\Controllers\ProductController::class, 'edit'])->name('product-edit')->middleware('Admin');
+Route::post('/admin/{product}/edit', [App\Http\Controllers\ProductController::class, 'update'])->name('product-edit')->middleware('Admin');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home/customers', [App\Http\Controllers\HomeController::class, 'customers'])->name('customers');
-Route::get('/home/products', [App\Http\Controllers\ProductController::class, 'index'])->name('products');
-Route::get('/home/product', [App\Http\Controllers\ProductController::class, 'addProduct'])->name('add-product');
-Route::get('/home/{product}/product-details', [App\Http\Controllers\ProductController::class, 'details'])->name('product-details');
-Route::get('/home/{product}/edit', [App\Http\Controllers\ProductController::class, 'edit'])->name('product-edit');
-Route::post('/home/{product}/edit', [App\Http\Controllers\ProductController::class, 'update'])->name('product-edit');
+});

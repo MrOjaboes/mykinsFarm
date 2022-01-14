@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Product;
 
+use App\Models\Category;
 use App\Models\Product;
 use Livewire\Component;
 use Illuminate\Support\Facades\Validator;
@@ -14,7 +15,8 @@ class Add extends Component
     public $photo;
     public function render()
     {
-        return view('livewire.product.add');
+        $categories = Category::all();
+        return view('livewire.product.add',compact('categories'));
     }
     public function addProduct()
     {
@@ -22,6 +24,7 @@ class Add extends Component
             'title' => 'required',
             'price' => 'required',
             'description' => 'required',
+            'category_id' => 'required',
 
         ])->validate();
           if($this->photo){

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<x-navbar></x-navbar>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -55,13 +56,13 @@
             <nav class="w-100">
               <div class="nav nav-tabs" id="product-tab" role="tablist">
                 <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
-                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Price</a>
+                <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Category</a>
 
               </div>
             </nav>
             <div class="tab-content p-3" id="nav-tabContent">
               <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"> {{$product->description}} </div>
-              <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> #{{$product->price}}</div>
+              <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> {{$product->category->title}}</div>
                </div>
           </div>
         </div>
