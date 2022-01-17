@@ -32,6 +32,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('Admin');
 Route::get('/admin/profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile')->middleware('Admin');
+Route::post('/admin/profile', [App\Http\Controllers\ProfileController::class, 'adminProfile'])->name('admin.profile')->middleware('Admin');
+Route::post('/admin/profile', [App\Http\Controllers\ProfileController::class, 'update_password'])->name('update.password')->middleware('Admin');
 Route::get('/admin/categories', [App\Http\Controllers\AdminController::class, 'categories'])->name('categories')->middleware('Admin');
 Route::get('/admin/customers', [App\Http\Controllers\AdminController::class, 'customers'])->name('customers')->middleware('Admin');
 Route::get('/admin/products', [App\Http\Controllers\ProductController::class, 'index'])->name('products')->middleware('Admin');
