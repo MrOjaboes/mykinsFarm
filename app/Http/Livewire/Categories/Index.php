@@ -16,7 +16,7 @@ class Index extends Component
     public $showEdit = false;
     public function render()
     {
-        $categories = Category::orderBy('created_at','DESC')->paginate(2);
+        $categories = Category::orderBy('created_at','DESC')->paginate(5);
         return view('livewire.categories.index',compact('categories'));
     }
     public function storeCat()
