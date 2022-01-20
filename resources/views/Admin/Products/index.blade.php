@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<x-navbar></x-navbar>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">

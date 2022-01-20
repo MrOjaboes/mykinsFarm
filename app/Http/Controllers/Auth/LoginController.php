@@ -54,7 +54,7 @@ class LoginController extends Controller
 
                   break;
                 case 0:
-                    return redirect()->route('home');
+                    return redirect()->route('checkout');
                   break;
                 default:
                 return redirect()->route('login');

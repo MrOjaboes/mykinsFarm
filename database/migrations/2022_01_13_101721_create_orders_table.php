@@ -30,7 +30,7 @@ class CreateOrdersTable extends Migration
             $table->string('shipping_city');
             $table->text('note')->nullable();
 
-            $table->string('sbilling_fullname');
+            $table->string('billing_fullname');
             $table->string('billing_address');
             $table->string('billing_contact');
             $table->string('billing_state');

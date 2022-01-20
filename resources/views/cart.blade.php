@@ -58,6 +58,7 @@
             </div>
             <div>
                 <a href="{{ url('/') }}" class="px-4 py-2 btn btn-primary">Continue Shopping</a>
+                <a href="{{ route('checkout') }}" class="px-4 py-2 btn btn-primary">Checkout</a>
                 <p style="float:right;">
                 <form action="{{ route('cart.clear') }}" method="POST">
                     @csrf

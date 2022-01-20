@@ -66,22 +66,15 @@
 
                                 <hr>
 
-                                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
+                                <strong><i class="fas fa-pencil-alt mr-1"></i> Role</strong>
 
                                 <p class="text-muted">
-                                    <span class="tag tag-danger">UI Design</span>
-                                    <span class="tag tag-success">Coding</span>
-                                    <span class="tag tag-info">Javascript</span>
-                                    <span class="tag tag-warning">PHP</span>
-                                    <span class="tag tag-primary">Node.js</span>
+                                    Admin
                                 </p>
 
                                 <hr>
 
-                                <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                                    fermentum enim neque.</p>
                             </div>
                             <!-- /.card-body -->
                         </div>
@@ -127,7 +120,7 @@
                                         </form>
                                     </div>
                                     <div class="tab-pane" id="settings">
-                                        <form class="form-horizontal" action="{{route('update.password')}}" method="POST">
+                                        <form class="form-horizontal" action="{{ route('update.password') }}" method="POST">
                                             @csrf
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Current
