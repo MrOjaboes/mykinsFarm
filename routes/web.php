@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome',['products'=> Product::all()]);
 });
+Route::get('/guest', function () {
+    return view('guest');
+});
 Route::post('/cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
 Route::post('/update-cart', [App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
 Route::post('/remove', [App\Http\Controllers\CartController::class, 'removeCart'])->name('cart.remove');
@@ -30,6 +33,9 @@ Route::group(['middleware' => ['auth']], function () {
    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
    Route::get('/checkout', [App\Http\Controllers\OrderController::class, 'create'])->name('checkout');
    Route::post('/checkout', [App\Http\Controllers\OrderController::class, 'store'])->name('checkout');
+   //payment using Authorize.net
+   Route::get('/payment', [App\Http\Controllers\PaymentController::class, 'index'])->name('payment');
+   Route::post('/charge', [App\Http\Controllers\PaymentController::class, 'charge'])->name('charge');
 
 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('Admin');
