@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('welcome',['products'=> Product::all()]);
+    return view('guest',['products'=> Product::all()]);
 });
 Route::get('/guest', function () {
     return view('guest');

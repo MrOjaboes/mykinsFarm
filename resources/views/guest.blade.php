@@ -1291,7 +1291,7 @@
         </div>
     </div>
 </div>
-<div class="product-categories-area pb-70">
+{{-- <div class="product-categories-area pb-70">
     <div class="container">
         <div class="section-title-tab-wrap border-bottom-3 mb-50 pb-20">
             <div class="section-title-3">
@@ -1412,7 +1412,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <div class="banner-area pb-85">
     <div class="container">
         <div class="row">
@@ -4929,7 +4929,7 @@
         </div>
     </div>
 </div>
-<div class="blog-area bg-gray-3 pt-115 pb-80">
+{{-- <div class="blog-area bg-gray-3 pt-115 pb-80">
     <div class="container">
         <div class="section-title-tab-wrap mb-35">
             <div class="section-title-3">
@@ -4990,8 +4990,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="brand-logo-area bg-gray-3 pb-80">
+</div> --}}
+{{-- <div class="brand-logo-area bg-gray-3 pb-80">
     <div class="container">
         <div class="brand-logo-wrap-2">
             <div class="single-brand-logo-2 mb-30">
@@ -5014,7 +5014,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <div class="subscribe-area bg-gray-4 pt-95 pb-95">
     <div class="container">
         <div class="row">

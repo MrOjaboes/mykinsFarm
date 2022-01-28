@@ -5,29 +5,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Norda - Minimal eCommerce HTML Template</title>
+    <title>myKinsFarm</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/guest/assets/images/favicon.png">
 
     <!-- All CSS is here
 	============================================ -->
 
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/signericafat.css">
-    <link rel="stylesheet" href="assets/css/vendor/cerebrisans.css">
-    <link rel="stylesheet" href="assets/css/vendor/simple-line-icons.css">
-    <link rel="stylesheet" href="assets/css/vendor/elegant.css">
-    <link rel="stylesheet" href="assets/css/vendor/linear-icon.css">
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
-    <link rel="stylesheet" href="assets/css/plugins/easyzoom.css">
-    <link rel="stylesheet" href="assets/css/plugins/slick.css">
-    <link rel="stylesheet" href="assets/css/plugins/animate.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/guest/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/guest/assets/css/vendor/signericafat.css">
+    <link rel="stylesheet" href="/guest/assets/css/vendor/cerebrisans.css">
+    <link rel="stylesheet" href="/guest/assets/css/vendor/simple-line-icons.css">
+    <link rel="stylesheet" href="/guest/assets/css/vendor/elegant.css">
+    <link rel="stylesheet" href="/guest/assets/css/vendor/linear-icon.css">
+    <link rel="stylesheet" href="/guest/assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="/guest/assets/css/plugins/easyzoom.css">
+    <link rel="stylesheet" href="/guest/assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="/guest/assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="/guest/assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="/guest/assets/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="/guest/assets/css/style.css">
 
 </head>
 
@@ -36,61 +36,13 @@
     <div class="main-wrapper">
         <header class="header-area">
             <div class="header-large-device">
-                <div class="header-top header-top-ptb-1 border-bottom-1">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-8 col-lg-7">
-                                <div class="social-offer-wrap">
-                                    <div class="social-style-1">
-                                        <a href="#"><i class="icon-social-twitter"></i></a>
-                                        <a href="#"><i class="icon-social-facebook"></i></a>
-                                        <a href="#"><i class="icon-social-instagram"></i></a>
-                                        <a href="#"><i class="icon-social-youtube"></i></a>
-                                        <a href="#"><i class="icon-social-pinterest"></i></a>
-                                    </div>
-                                    <div class="header-offer-wrap-2">
-                                        <p><span>FREE SHIPPING</span> world wide for all orders over $199</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-5">
-                                <div class="header-top-right">
-                                    <div class="same-style-wrap">
-                                        <div class="same-style same-style-mrg-2 track-order">
-                                            <a href="store-location.html">Store Location </a>
-                                        </div>
-                                        <div class="same-style same-style-mrg-2 currency-wrap">
-                                            <a class="currency-dropdown-active" href="#"> USD($) <i class="icon-arrow-down"></i></a>
-                                            <div class="currency-dropdown">
-                                                <ul>
-                                                    <li><a href="#">USD</a></li>
-                                                    <li><a href="#">EUR</a></li>
-                                                    <li><a href="#">BDT</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="same-style same-style-mrg-2 language-wrap">
-                                            <a class="language-dropdown-active" href="#">English <i class="icon-arrow-down"></i></a>
-                                            <div class="language-dropdown">
-                                                <ul>
-                                                    <li><a href="#">English</a></li>
-                                                    <li><a href="#">German</a></li>
-                                                    <li><a href="#">Spanish</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="header-middle header-middle-padding-1">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo"></a>
+                                    <a href="index.html"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-xl-7 col-lg-7">
@@ -131,135 +83,28 @@
                         </div>
                     </div>
                 </div>
+                {{-- Categories 47A413 --}}
                 <div class="header-bottom">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="main-categori-wrap">
-                                    <a class="categori-show" href="#"><i class="lnr lnr-menu"></i> All Department <i class="icon-arrow-down icon-right"></i></a>
+                                    <a class="categori-show" href="#"><i class="lnr lnr-menu"></i> All Categories <i class="icon-arrow-down icon-right"></i></a>
                                     <div class="category-menu categori-hide">
                                         <nav>
                                             <ul>
-                                                <li class="cr-dropdown"><a href="#">Clothing <span class="icon-arrow-right"></span></a>
-                                                    <div class="category-menu-dropdown ct-menu-res-height-1">
-                                                        <div class="single-category-menu ct-menu-mrg-bottom category-menu-border">
-                                                            <h4>Men Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Sleeveless shirt</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt</a></li>
-                                                                <li><a href="shop.html">Trench coat</a></li>
-                                                                <li><a href="shop.html">Cargo pants</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu ct-menu-mrg-bottom ct-menu-mrg-left">
-                                                            <h4>Women Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Wedding dress</a></li>
-                                                                <li><a href="shop.html">Gym clothes</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt </a></li>
-                                                                <li><a href="shop.html">Long coat</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu">
-                                                            <h4>Kids Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Winter Wear </a></li>
-                                                                <li><a href="shop.html">Occasion Gowns</a></li>
-                                                                <li><a href="shop.html">Birthday Tailcoat</a></li>
-                                                                <li><a href="shop.html">Stylish Unicorn</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu">
-                                                            <a href="product-details.html"><img src="assets/images/menu/menu-categori-1.png" alt=""></a>
-                                                        </div>
-                                                    </div>
+
+                                                <li class="cr-dropdown"><a href="#">Baby Girl </a>
+                                                <li><a href="shop.html">Sleeveless shirt</a></li>
+                                                <li class="cr-dropdown"><a href="#">Baby Girl </a>
+                                                <li><a href="shop.html">Sleeveless shirt</a></li>
+                                                <li class="cr-dropdown"><a href="#">Baby Girl </a>
+                                                <li><a href="shop.html">Sleeveless shirt</a></li>
+                                                <li class="cr-dropdown"><a href="#">Baby Girl </a>
+                                                <li><a href="shop.html">Sleeveless shirt</a></li>
+
                                                 </li>
-                                                <li class="cr-dropdown"><a href="#">Women <span class="icon-arrow-right"></span></a>
-                                                    <div class="category-menu-dropdown ct-menu-res-height-2">
-                                                        <div class="single-category-menu">
-                                                            <h4>Men Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Sleeveless shirt</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt</a></li>
-                                                                <li><a href="shop.html">Trench coat</a></li>
-                                                                <li><a href="shop.html">Cargo pants</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu ct-menu-mrg-left">
-                                                            <h4>Women Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Wedding dress</a></li>
-                                                                <li><a href="shop.html">Gym clothes</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt </a></li>
-                                                                <li><a href="shop.html">Long coat</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="cr-dropdown"><a href="#">Men <span class="icon-arrow-right"></span></a>
-                                                    <div class="category-menu-dropdown ct-menu-res-height-1">
-                                                        <div class="single-category-menu ct-menu-mrg-bottom category-menu-border">
-                                                            <h4>Men Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Sleeveless shirt</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt</a></li>
-                                                                <li><a href="shop.html">Trench coat</a></li>
-                                                                <li><a href="shop.html">Cargo pants</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu ct-menu-mrg-bottom ct-menu-mrg-left">
-                                                            <h4>Women Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Wedding dress</a></li>
-                                                                <li><a href="shop.html">Gym clothes</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt </a></li>
-                                                                <li><a href="shop.html">Long coat</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu">
-                                                            <h4>Kids Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Winter Wear </a></li>
-                                                                <li><a href="shop.html">Occasion Gowns</a></li>
-                                                                <li><a href="shop.html">Birthday Tailcoat</a></li>
-                                                                <li><a href="shop.html">Stylish Unicorn</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu">
-                                                            <a href="#"><img src="assets/images/menu/menu-categori-1.png" alt=""></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="cr-dropdown"><a href="#">Baby Girl <span class="icon-arrow-right"></span></a>
-                                                    <div class="category-menu-dropdown ct-menu-res-height-2">
-                                                        <div class="single-category-menu">
-                                                            <h4>Men Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Sleeveless shirt</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt</a></li>
-                                                                <li><a href="shop.html">Trench coat</a></li>
-                                                                <li><a href="shop.html">Cargo pants</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="single-category-menu ct-menu-mrg-left">
-                                                            <h4>Women Clothing</h4>
-                                                            <ul>
-                                                                <li><a href="shop.html">Wedding dress</a></li>
-                                                                <li><a href="shop.html">Gym clothes</a></li>
-                                                                <li><a href="shop.html">Cotton T-shirt </a></li>
-                                                                <li><a href="shop.html">Long coat</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="cr-dropdown"><a href="shop.html">Baby Boy </a></li>
-                                                <li class="cr-dropdown"><a href="shop.html">Accessories </a></li>
-                                                <li class="cr-dropdown"><a href="shop.html">Shoes</a></li>
-                                                <li class="cr-dropdown"><a href="shop.html">Shirt</a></li>
-                                                <li class="cr-dropdown"><a href="shop.html">T-Shirt</a></li>
-                                                <li class="cr-dropdown"><a href="shop.html">Coat</a></li>
-                                                <li class="cr-dropdown"><a href="shop.html">Jeans</a></li>
-                                                <li class="cr-dropdown"><a href="shop.html">Collection </a></li>
+
                                             </ul>
                                         </nav>
                                     </div>
@@ -312,7 +157,7 @@
                                                                 </ul>
                                                             </li>
                                                             <li>
-                                                                <a href="shop.html"><img src="assets/images/banner/banner-12.png" alt=""></a>
+                                                                <a href="shop.html"><img src="/guest/assets/images/banner/banner-12.png" alt=""></a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -359,7 +204,7 @@
                         <div class="col-5">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img alt="" src="assets/images/logo/logo.png">
+                                    <img alt="" src="/guest/assets/images/logo/logo.png">
                                 </a>
                             </div>
                         </div>
@@ -394,7 +239,7 @@
                     <ul>
                         <li class="single-product-cart">
                             <div class="cart-img">
-                                <a href="#"><img src="assets/images/cart/cart-1.jpg" alt=""></a>
+                                <a href="#"><img src="/guest/assets/images/cart/cart-1.jpg" alt=""></a>
                             </div>
                             <div class="cart-title">
                                 <h4><a href="#">Simple Black T-Shirt</a></h4>
@@ -406,7 +251,7 @@
                         </li>
                         <li class="single-product-cart">
                             <div class="cart-img">
-                                <a href="#"><img src="assets/images/cart/cart-2.jpg" alt=""></a>
+                                <a href="#"><img src="/guest/assets/images/cart/cart-2.jpg" alt=""></a>
                             </div>
                             <div class="cart-title">
                                 <h4><a href="#">Norda Backpack</a></h4>
@@ -683,9 +528,9 @@
                                             <p class="animated">Men's basic coat with a high lapel collar and side pockets with button fastening.</p>
                                             <h5 class="animated">3 Colors: <span>Grey</span></h5>
                                             <div class="slider-tab-small-img nav animated">
-                                                <a class="active" href="#tshirt-4" data-bs-toggle="tab"><img src="assets/images/slider/hm-3-small-tshirt-1.jpg" alt=""> </a>
-                                                <a href="#tshirt-5" data-bs-toggle="tab"> <img src="assets/images/slider/hm-3-small-tshirt-2.jpg" alt=""> </a>
-                                                <a href="#tshirt-6" data-bs-toggle="tab"><img src="assets/images/slider/hm-3-small-tshirt-3.jpg" alt=""> </a>
+                                                <a class="active" href="#tshirt-4" data-bs-toggle="tab"><img src="/guest/assets/images/slider/hm-3-small-tshirt-1.jpg" alt=""> </a>
+                                                <a href="#tshirt-5" data-bs-toggle="tab"> <img src="/guest/assets/images/slider/hm-3-small-tshirt-2.jpg" alt=""> </a>
+                                                <a href="#tshirt-6" data-bs-toggle="tab"><img src="/guest/assets/images/slider/hm-3-small-tshirt-3.jpg" alt=""> </a>
                                             </div>
                                             <div class="btn-style-3">
                                                 <a class="animated btn-1-padding-1" href="product-details.html">Shop now <i class="icon-arrow-right"></i></a>
@@ -696,17 +541,17 @@
                                         <div class="tab-content slider-tab-big-img-wrap jump animated">
                                             <div id="tshirt-4" class="tab-pane active">
                                                 <div class="slider-tab-big-img slider-tab-big-img-mrg-1">
-                                                    <img src="assets/images/slider/hm-3-slider-1.png" alt="">
+                                                    <img src="/guest/assets/images/slider/hm-3-slider-1.png" alt="">
                                                 </div>
                                             </div>
                                             <div id="tshirt-5" class="tab-pane ">
                                                 <div class="slider-tab-big-img slider-tab-big-img-mrg-2">
-                                                    <img src="assets/images/slider/hm-3-slider-2.png" alt="">
+                                                    <img src="/guest/assets/images/slider/hm-3-slider-2.png" alt="">
                                                 </div>
                                             </div>
                                             <div id="tshirt-6" class="tab-pane">
                                                 <div class="slider-tab-big-img slider-tab-big-img-mrg-3">
-                                                    <img src="assets/images/slider/hm-3-slider-3.png" alt="">
+                                                    <img src="/guest/assets/images/slider/hm-3-slider-3.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -728,9 +573,9 @@
                                             <p class="animated">Men's basic coat with a high lapel collar and side pockets with button fastening.</p>
                                             <h5 class="animated">3 Colors: <span>Grey</span></h5>
                                             <div class="slider-tab-small-img nav animated">
-                                                <a href="#tshirt-7" data-bs-toggle="tab"><img src="assets/images/slider/hm-3-small-tshirt-1.jpg" alt=""> </a>
-                                                <a class="active" href="#tshirt-8" data-bs-toggle="tab"> <img src="assets/images/slider/hm-3-small-tshirt-2.jpg" alt=""> </a>
-                                                <a href="#tshirt-9" data-bs-toggle="tab"><img src="assets/images/slider/hm-3-small-tshirt-3.jpg" alt=""> </a>
+                                                <a href="#tshirt-7" data-bs-toggle="tab"><img src="/guest/assets/images/slider/hm-3-small-tshirt-1.jpg" alt=""> </a>
+                                                <a class="active" href="#tshirt-8" data-bs-toggle="tab"> <img src="/guest/assets/images/slider/hm-3-small-tshirt-2.jpg" alt=""> </a>
+                                                <a href="#tshirt-9" data-bs-toggle="tab"><img src="/guest/assets/images/slider/hm-3-small-tshirt-3.jpg" alt=""> </a>
                                             </div>
                                             <div class="btn-style-3">
                                                 <a class="animated btn-1-padding-1" href="product-details.html">Shop now <i class="icon-arrow-right"></i></a>
@@ -741,17 +586,17 @@
                                         <div class="tab-content slider-tab-big-img-wrap jump animated">
                                             <div id="tshirt-7" class="tab-pane">
                                                 <div class="slider-tab-big-img slider-tab-big-img-mrg-1">
-                                                    <img src="assets/images/slider/hm-3-slider-1.png" alt="">
+                                                    <img src="/guest/assets/images/slider/hm-3-slider-1.png" alt="">
                                                 </div>
                                             </div>
                                             <div id="tshirt-8" class="tab-pane active">
                                                 <div class="slider-tab-big-img slider-tab-big-img-mrg-2">
-                                                    <img src="assets/images/slider/hm-3-slider-2.png" alt="">
+                                                    <img src="/guest/assets/images/slider/hm-3-slider-2.png" alt="">
                                                 </div>
                                             </div>
                                             <div id="tshirt-9" class="tab-pane">
                                                 <div class="slider-tab-big-img slider-tab-big-img-mrg-3">
-                                                    <img src="assets/images/slider/hm-3-slider-3.png" alt="">
+                                                    <img src="/guest/assets/images/slider/hm-3-slider-3.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -819,7 +664,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="banner-wrap mb-10">
                             <div class="banner-img banner-img-border banner-img-zoom">
-                                <a href="product-details.html"><img src="assets/images/banner/banner-3.jpg" alt=""></a>
+                                <a href="product-details.html"><img src="/guest/assets/images/banner/banner-3.jpg" alt=""></a>
                             </div>
                             <div class="banner-content-3">
                                 <h2>Basic Solid Color <br>Sneaker</h2>
@@ -834,7 +679,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="banner-wrap mb-10">
                             <div class="banner-img banner-img-border banner-img-zoom">
-                                <a href="product-details.html"><img src="assets/images/banner/banner-4.jpg" alt=""></a>
+                                <a href="product-details.html"><img src="/guest/assets/images/banner/banner-4.jpg" alt=""></a>
                             </div>
                             <div class="banner-content-4">
                                 <h2>Discount <br> <span>50%</span> OFF</h2>
@@ -849,7 +694,7 @@
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="banner-wrap mb-10">
                             <div class="banner-img banner-img-border banner-img-zoom">
-                                <a href="product-details.html"><img src="assets/images/banner/banner-5.jpg" alt=""></a>
+                                <a href="product-details.html"><img src="/guest/assets/images/banner/banner-5.jpg" alt=""></a>
                             </div>
                             <div class="banner-content-5">
                                 <span>Hello kids</span>
@@ -962,7 +807,7 @@
                     <div class="row flex-row-reverse">
                         <div class="col-lg-6 col-md-6">
                             <div class="payment-img payment-img-right">
-                                <a href="#"><img src="assets/images/icon-img/payment.png" alt=""></a>
+                                <a href="#"><img src="/guest/assets/images/icon-img/payment.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -986,24 +831,24 @@
                             <div class="col-lg-5 col-md-6 col-12 col-sm-12">
                                 <div class="tab-content quickview-big-img">
                                     <div id="pro-1" class="tab-pane fade show active">
-                                        <img src="assets/images/product/product-1.jpg" alt="">
+                                        <img src="/guest/assets/images/product/product-1.jpg" alt="">
                                     </div>
                                     <div id="pro-2" class="tab-pane fade">
-                                        <img src="assets/images/product/product-3.jpg" alt="">
+                                        <img src="/guest/assets/images/product/product-3.jpg" alt="">
                                     </div>
                                     <div id="pro-3" class="tab-pane fade">
-                                        <img src="assets/images/product/product-6.jpg" alt="">
+                                        <img src="/guest/assets/images/product/product-6.jpg" alt="">
                                     </div>
                                     <div id="pro-4" class="tab-pane fade">
-                                        <img src="assets/images/product/product-3.jpg" alt="">
+                                        <img src="/guest/assets/images/product/product-3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="quickview-wrap mt-15">
                                     <div class="quickview-slide-active nav nav-style-6">
-                                        <a class="active" data-bs-toggle="tab" href="#pro-1"><img src="assets/images/product/quickview-s1.jpg" alt=""></a>
-                                        <a data-bs-toggle="tab" href="#pro-2"><img src="assets/images/product/quickview-s2.jpg" alt=""></a>
-                                        <a data-bs-toggle="tab" href="#pro-3"><img src="assets/images/product/quickview-s3.jpg" alt=""></a>
-                                        <a data-bs-toggle="tab" href="#pro-4"><img src="assets/images/product/quickview-s2.jpg" alt=""></a>
+                                        <a class="active" data-bs-toggle="tab" href="#pro-1"><img src="/guest/assets/images/product/quickview-s1.jpg" alt=""></a>
+                                        <a data-bs-toggle="tab" href="#pro-2"><img src="/guest/assets/images/product/quickview-s2.jpg" alt=""></a>
+                                        <a data-bs-toggle="tab" href="#pro-3"><img src="/guest/assets/images/product/quickview-s3.jpg" alt=""></a>
+                                        <a data-bs-toggle="tab" href="#pro-4"><img src="/guest/assets/images/product/quickview-s2.jpg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1099,25 +944,25 @@
     <!-- All JS is here
 ============================================ -->
 
-    <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
-    <script src="assets/js/vendor/jquery-v3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/plugins/slick.js"></script>
-    <script src="assets/js/plugins/jquery.syotimer.min.js"></script>
-    <script src="assets/js/plugins/jquery.instagramfeed.min.js"></script>
-    <script src="assets/js/plugins/jquery.nice-select.min.js"></script>
-    <script src="assets/js/plugins/wow.js"></script>
-    <script src="assets/js/plugins/jquery-ui-touch-punch.js"></script>
-    <script src="assets/js/plugins/jquery-ui.js"></script>
-    <script src="assets/js/plugins/magnific-popup.js"></script>
-    <script src="assets/js/plugins/sticky-sidebar.js"></script>
-    <script src="assets/js/plugins/easyzoom.js"></script>
-    <script src="assets/js/plugins/scrollup.js"></script>
-    <script src="assets/js/plugins/ajax-mail.js"></script>
+    <script src="/guest/assets/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="/guest/assets/js/vendor/jquery-v3.6.0.min.js"></script>
+    <script src="/guest/assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+    <script src="/guest/assets/js/vendor/popper.min.js"></script>
+    <script src="/guest/assets/js/vendor/bootstrap.min.js"></script>
+    <script src="/guest/assets/js/plugins/slick.js"></script>
+    <script src="/guest/assets/js/plugins/jquery.syotimer.min.js"></script>
+    <script src="/guest/assets/js/plugins/jquery.instagramfeed.min.js"></script>
+    <script src="/guest/assets/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="/guest/assets/js/plugins/wow.js"></script>
+    <script src="/guest/assets/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="/guest/assets/js/plugins/jquery-ui.js"></script>
+    <script src="/guest/assets/js/plugins/magnific-popup.js"></script>
+    <script src="/guest/assets/js/plugins/sticky-sidebar.js"></script>
+    <script src="/guest/assets/js/plugins/easyzoom.js"></script>
+    <script src="/guest/assets/js/plugins/scrollup.js"></script>
+    <script src="/guest/assets/js/plugins/ajax-mail.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="/guest/assets/js/main.js"></script>
 
 </body>
 

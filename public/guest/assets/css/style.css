@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------------------------
-    
+
     Template Name: Norda - Minimal eCommerce HTML Template
     Version: 1.2
-    
+
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
     1. Template default CSS
@@ -34,7 +34,7 @@
     25. Contect us style
     26. Blog details style
     27. Order tracking style
-    
+
 -----------------------------------------------------------------------------------*/
 /*----------------------------------------*/
 /*  1. Template default CSS
@@ -177,7 +177,7 @@ ul {
   padding: 0;
 }
 
-/*-- 
+/*--
     - Common Classes
 -----------------------------------------*/
 .fix {
@@ -1502,7 +1502,7 @@ ul {
 }
 
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 .ptb-0 {
   padding: 0;
@@ -1617,7 +1617,7 @@ ul {
 }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .mtb-0 {
   margin: 0;
@@ -1691,7 +1691,7 @@ ul {
   margin: 290px 0;
 }
 
-/*-- 
+/*--
     - Input Placeholder
 -----------------------------------------*/
 input:-moz-placeholder,
@@ -1870,8 +1870,8 @@ textarea:focus {
   }
 }
 
-/*-- 
-    Scroll Up 
+/*--
+    Scroll Up
 -----------------------------------------*/
 #scrollUp {
   width: 40px;
@@ -3395,11 +3395,11 @@ textarea:focus {
 }
 
 .main-menu > nav > ul > li a span.bg-red {
-  background-color: #ff2f2f;
+  background-color: #47A413;
 }
 
 .main-menu > nav > ul > li a span.bg-green {
-  background-color: #70c01a;
+  background-color: #47A413;
 }
 
 .main-menu > nav > ul > li a i {
@@ -3409,7 +3409,7 @@ textarea:focus {
 }
 
 .main-menu > nav > ul > li:hover > a {
-  color: #ff2f2f;
+  color: #47A413;
 }
 
 .main-menu > nav > ul > li:hover > ul {
@@ -3423,7 +3423,7 @@ textarea:focus {
 }
 
 .main-menu.main-menu-white > nav > ul > li:hover > a {
-  color: #ff2f2f;
+  color: #47A413;
 }
 
 .main-menu.main-menu-white.main-menu-hover-black > nav > ul > li:hover > a {
@@ -3653,7 +3653,7 @@ textarea:focus {
 }
 
 .header-action .same-style-2 a span.green {
-  background-color: #4dbdaf;
+  background-color: #46A415;
 }
 
 .header-action .same-style-2 a span.purple {
@@ -4419,7 +4419,7 @@ textarea:focus {
 }
 
 .main-categori-wrap > a {
-  color: #4dbdaf;
+  color: #45A314;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -4670,7 +4670,7 @@ textarea:focus {
 }
 
 .category-menu nav > ul > li .category-menu-dropdown .single-category-menu ul li a:hover {
-  color: #4dbdaf;
+  color: #47A413;
 }
 
 .category-menu nav > ul > li .category-menu-dropdown .single-category-menu > a img {
@@ -4699,7 +4699,7 @@ textarea:focus {
 }
 
 .category-menu nav > ul > li:hover > a, .category-menu nav > ul > li:hover > a span {
-  color: #4dbdaf;
+  color: #47A413;
 }
 
 .category-menu nav > ul > li:hover .category-menu-dropdown {
@@ -4777,7 +4777,7 @@ textarea:focus {
 }
 
 .category-menu-2 nav > ul > li:hover > a, .category-menu-2 nav > ul > li:hover > a span {
-  color: #6aae27;
+  color: #47A413;
 }
 
 .category-menu-2 nav > ul > li:hover .category-menu-dropdown {
@@ -4856,7 +4856,7 @@ textarea:focus {
 }
 
 .header-offer-wrap-3 p a:hover {
-  color: #ff2f2f;
+  color: #47A413;
 }
 
 .header-offer-wrap-3 p.black {
@@ -4949,7 +4949,7 @@ textarea:focus {
 }
 
 .header-offer-wrap-4 p span.amount {
-  color: #fc302f;
+  color: #47A413;
   font-weight: 600;
 }
 
@@ -6867,7 +6867,7 @@ textarea:focus {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #4dbdaf;
+  color: #47A413;
   margin: 0;
   letter-spacing: .5px;
 }
@@ -6995,7 +6995,7 @@ textarea:focus {
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #4dbdaf;
+  background-color: #47A413;
   padding: 12px 27px 11px;
 }
 
@@ -14817,7 +14817,7 @@ textarea:focus {
   letter-spacing: .75px;
   padding: 0 30px;
   color: #ffffff;
-  background-color: #4dbdaf;
+  background-color: #47A413;
 }
 
 @media only screen and (max-width: 767px) {
