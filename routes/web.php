@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Admin Login
+Route::get('/admin-login', function () {
+    return view('auth.admin_login');
+});
 Route::get('/category/spices&seasonings', function () {
     return view('Categories.spices_seasoning',['products'=> Product::where('category_id',5)->get()]);
 });

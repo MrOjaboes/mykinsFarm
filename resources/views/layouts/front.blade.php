@@ -46,15 +46,7 @@
                             </div>
                             <div class="col-xl-7 col-lg-7">
                                 <div class="categori-search-wrap">
-                                    <div class="categori-style-1">
-                                        <select class="nice-select nice-select-style-1">
-                                            <option>All Categories </option>
-                                            <option>Clothing </option>
-                                            <option>T-Shirt</option>
-                                            <option>Shoes</option>
-                                            <option>Jeans</option>
-                                        </select>
-                                    </div>
+                                    
                                     <div class="search-wrap-3">
                                         <form action="#">
                                             <input placeholder="Search Products..." type="text">
@@ -66,7 +58,32 @@
                             <div class="col-xl-3 col-lg-3">
                                 <div class="header-action header-action-flex">
                                     <div class="same-style-2 same-style-2-font-inc">
-                                        <a href="{{route('login')}}"><i class="icon-user"></i></a>
+                                        @guest
+                                        @if (Route::has('login'))
+                                        <a href="{{route('login')}}"><i class="icon-user"></i>Login</a>
+                                        @endif
+                                        @if (Route::has('register'))
+                                        <a href="{{route('register')}}"><i class="icon-user"></i>Register</a>
+                                        @endif
+                                        @else
+                                        <li class="nav-item dropdown" style="list-style-type: none;">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name }}
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </li>
+                                        @endguest
                                     </div>
                                     {{-- <div class="same-style-2 same-style-2-font-inc">
                                         <a href="wishlist.html"><i class="icon-heart"></i><span

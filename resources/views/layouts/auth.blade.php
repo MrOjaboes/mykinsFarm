@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="/AdminUi/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/AdminUi/dist/css/adminlte.min.css">
+  @livewireStyles
 </head>
 <body class="hold-transition login-page">
- 
-  @yield('content')
 
+  @yield('content')
+@livewireScripts
 <!-- jQuery -->
 <script src="/AdminUi/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
