@@ -24,11 +24,11 @@
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
+                            <a href="{{route('product.details',$product->id)}}"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
                                 <span>{{$product->name}}</span>
-                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
+                                <h4><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
@@ -71,11 +71,11 @@
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
+                                <a href="{{route('product.details',$product->id)}}"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
                                 <span>{{$product->name}}</span>
-                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
+                                <h4><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
@@ -117,11 +117,11 @@
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
+                                <a href="{{route('product.details',$product->id)}}"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
                                 <span>{{$product->name}}</span>
-                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
+                                <h4><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
@@ -164,11 +164,11 @@
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
+                                <a href="{{route('product.details',$product->id)}}"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
                                 <span>{{$product->name}}</span>
-                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
+                                <h4><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
@@ -210,11 +210,11 @@
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
+                                <a href="{{route('product.details',$product->id)}}"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
                                 <span>{{$product->name}}</span>
-                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
+                                <h4><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>

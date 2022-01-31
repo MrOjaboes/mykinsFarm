@@ -10,7 +10,7 @@ class orderController extends Controller
 {
     public function create(Request $request)
     {
-        return view('checkout');
+        return view('checkout2');
     }
     public function store(Request $request)
     {

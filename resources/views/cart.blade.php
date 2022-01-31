@@ -18,11 +18,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <table class="table table-condensed table-hover table-responsive-lg">
                     <thead>
                         <tr>
-                            <th style="width: 300"></th>
+                            <th></th>
                             <th>Name</th>
                             <th>Qty</th>
                             <th>Price</th>
@@ -58,6 +58,7 @@
                 <span>Total : # {{ Cart::getTotal() }}</span>
 
             </div>
+            <div class="col-md-4"></div>
             <div>
                 <a href="{{ url('/') }}" class="px-4 py-2 btn btn-primary">Continue Shopping</a>
                 <a href="{{ route('payment') }}" class="px-4 py-2 btn btn-primary">Checkout</a>

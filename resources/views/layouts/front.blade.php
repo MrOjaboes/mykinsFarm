@@ -73,7 +73,7 @@
                                                 class="pro-count green">03</span></a>
                                     </div> --}}
                                     <div class="same-style-2 same-style-2-font-inc header-cart">
-                                        <a class="cart-active" href="#">
+                                        <a class="" href="{{route('cart.list')}}">
                                             <i class="icon-basket-loaded"></i><span class="pro-count green"> {{ Cart::getTotalQuantity()}}</span>
                                             <span class="cart-amount">${{ Cart::getTotal() }}</span>
                                         </a>
@@ -153,8 +153,8 @@
                                             class="pro-count green">03</span></a>
                                 </div> --}}
                                 <div class="same-style-2 same-style-2-font-inc header-cart">
-                                    <a class="cart-active" href="#">
-                                        <i class="icon-basket-loaded"></i><span class="pro-count green"> {{ Cart::getTotalQuantity()}}</span>
+                                    <a class="cart-active" href="{{route('cart.list')}}">
+                                        <i class="icon-basket-loaded"></i><span class="pro-count green">{{ Cart::getTotalQuantity()}}</span>
                                     </a>
                                 </div>
                                 <div class="same-style-2 main-menu-icon">
@@ -166,48 +166,7 @@
                 </div>
             </div>
         </header>
-        <!-- mini cart start -->
-        <div class="sidebar-cart-active">
-            <div class="sidebar-cart-all">
-                <a class="cart-close" href="#"><i class="icon_close"></i></a>
-                <div class="cart-content">
-                    <h3>Shopping ffCart</h3>
-                    <ul>
-                        <li class="single-product-cart">
-                            <div class="cart-img">
-                                <a href="#"><img src="/guest/assets/images/cart/cart-1.jpg" alt=""></a>
-                            </div>
-                            <div class="cart-title">
-                                <h4><a href="#">Simple Black T-Shirt</a></h4>
-                                <span> 1 × $49.00 </span>
-                            </div>
-                            <div class="cart-delete">
-                                <a href="#">×</a>
-                            </div>
-                        </li>
-                        <li class="single-product-cart">
-                            <div class="cart-img">
-                                <a href="#"><img src="/guest/assets/images/cart/cart-2.jpg" alt=""></a>
-                            </div>
-                            <div class="cart-title">
-                                <h4><a href="#">Norda Backpack</a></h4>
-                                <span> 1 × $49.00 </span>
-                            </div>
-                            <div class="cart-delete">
-                                <a href="#">×</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="cart-total">
-                        <h4>Subtotal: <span>$170.00</span></h4>
-                    </div>
-                    <div class="cart-checkout-btn">
-                        <a class="btn-hover cart-btn-style" href="cart.html">view cart</a>
-                        <a class="no-mrg btn-hover cart-btn-style" href="checkout.html">checkout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- mobile header start -->
         <div class="mobile-header-active mobile-header-wrapper-style">
             <div class="clickalbe-sidebar-wrap">
@@ -427,60 +386,7 @@
                 </div>
             </div>
         </div>
-        <div class="banner-area padding-10-row-col pb-105">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="banner-wrap mb-10">
-                            <div class="banner-img banner-img-border banner-img-zoom">
-                                <a href="product-details.html"><img src="/guest/assets/images/banner/banner-3.jpg"
-                                        alt=""></a>
-                            </div>
-                            <div class="banner-content-3">
-                                <h2>Basic Solid Color <br>Sneaker</h2>
-                                <span>Start</span>
-                                <h3>$168.50</h3>
-                                <div class="btn-style-4">
-                                    <a href="product-details.html">Shop now <i class="icon-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="banner-wrap mb-10">
-                            <div class="banner-img banner-img-border banner-img-zoom">
-                                <a href="product-details.html"><img src="/guest/assets/images/banner/banner-4.jpg"
-                                        alt=""></a>
-                            </div>
-                            <div class="banner-content-4">
-                                <h2>Discount <br> <span>50%</span> OFF</h2>
-                                <span>backpack</span>
-                                <h3>new era</h3>
-                                <div class="btn-style-4">
-                                    <a href="product-details.html">Shop now <i class="icon-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="banner-wrap mb-10">
-                            <div class="banner-img banner-img-border banner-img-zoom">
-                                <a href="product-details.html"><img src="/guest/assets/images/banner/banner-5.jpg"
-                                        alt=""></a>
-                            </div>
-                            <div class="banner-content-5">
-                                <span>Hello kids</span>
-                                <h2>Activities Boys <br>with HelloKid</h2>
-                                <p>Discover collection from Hello Kid brand</p>
-                                <div class="btn-style-4">
-                                    <a href="product-details.html">explore <i class="icon-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
         {{-- product --}}
         @yield('content')

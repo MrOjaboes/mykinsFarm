@@ -28,9 +28,9 @@ class CartController extends Controller
 
     public function cartList()
     {
-       $cartItems = \Cart::getContent();
+       //$cartItems = \Cart::getContent();
        //dd($cartItems);
-       return view('cart',compact('cartItems'));
+       return view('cart_list');
     }
 public function updateCart(Request $request)
 {

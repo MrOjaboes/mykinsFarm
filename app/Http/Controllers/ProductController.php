@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('product_details');
     }
    public function index()
    {
@@ -21,6 +21,12 @@ class ProductController extends Controller
    {
        return view('Admin.Products.addProduct');
    }
+public function product_details(Product $product)
+{
+    //dd($product);
+    return view('product_details',compact('product'));
+
+}
 
    public function details(Product $product)
    {
@@ -40,7 +46,7 @@ class ProductController extends Controller
             $photo = $request->file('photo');
             $fileName = $photo->getClientOriginalName();
             $request->photo->storeAs('Products',$fileName,'public');
-            
+
             $product->update([
                 'name' => $request->name,
                 'price' => $request->price,

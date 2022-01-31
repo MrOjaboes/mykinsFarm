@@ -29,6 +29,8 @@ Route::get('/category/dried-vegetable', function () {
 Route::get('/category/flour&swallow', function () {
     return view('Categories.flour_swallow',['products'=> Product::where('category_id',3)->get()]);
 });
+
+Route::get('/product/details/{product}', [App\Http\Controllers\ProductController::class, 'product_details'])->name('product.details');
 Route::get('/', function () {
     return view('guest',['products'=> Product::all()]);
 });

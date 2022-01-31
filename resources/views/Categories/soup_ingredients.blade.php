@@ -16,20 +16,16 @@
                     <div class="product-plr-1">
                         <div class="single-product-wrap">
                             <div class="product-img product-img-zoom mb-15">
-                                <a href="product-details.html">
-                                    <img src="assets/images/product/product-27.jpg" alt="">
+                                <a href="{{route('product.details',$product->id)}}">
+                                    <img src="{{ asset('/storage/products/' . $product->photo) }}" alt="">
                                 </a>
-                                <div class="product-action-2 tooltip-style-2">
-                                    <button title="Wishlist"><i class="icon-heart"></i></button>
-                                    <button title="Quick View" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
-                                    <button title="Compare"><i class="icon-refresh"></i></button>
-                                </div>
+
                             </div>
                             <div class="product-content-wrap-3">
                                 <div class="product-content-categories">
-                                    <a href="shop.html">Men</a>
+                                    <a href="">{{$product->category->title}}</a>
                                 </div>
-                                <h3><a href="product-details.html">Basic Simple T-Shirt</a></h3>
+                                <h3><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h3>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-4">
                                         <i class="icon_star"></i>
@@ -38,35 +34,36 @@
                                         <i class="icon_star"></i>
                                         <i class="icon_star gray"></i>
                                     </div>
-                                    <span>(2)</span>
+                                    <span>(4)</span>
                                 </div>
                                 <div class="product-price-4">
-                                    <span class="new-price">$38.50 </span>
-                                    <span class="old-price">$42.85</span>
+                                    <span class="new-price">${{$product->price}} </span>
+
                                 </div>
                             </div>
                             <div class="product-content-wrap-3 product-content-position-2">
                                 <div class="product-content-categories">
-                                    <a href="shop.html">Men</a>
+                                    <a href="{{route('product.details',$product->id)}}">{{$product->category->title}}</a>
                                 </div>
-                                <h3><a href="product-details.html">Basic Simple T-Shirt</a></h3>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-4">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
+                                <h3><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h3>
+
                                 <div class="product-price-4">
-                                    <span class="new-price">$38.50 </span>
-                                    <span class="old-price">$42.85</span>
+                                    <span class="new-price">${{$product->price}} </span>
+
                                 </div>
-                                <div class="pro-add-to-cart-2">
-                                    <button title="Add to Cart">Add To Cart</button>
-                                </div>
+                                <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <input type="hidden" name="name" value="{{ $product->name }}">
+                                    <input type="hidden" name="price" value="{{ $product->price }}">
+                                    <input type="hidden" name="photo" value="{{ $product->photo }}">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <div class="pro-add-to-cart-2">
+                                        <button title="Add to Cart">Add To Cart</button>
+                                    </div>
+                                </form>
+
+
                             </div>
                         </div>
                     </div>
