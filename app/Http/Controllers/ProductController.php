@@ -40,15 +40,24 @@ class ProductController extends Controller
             $photo = $request->file('photo');
             $fileName = $photo->getClientOriginalName();
             $request->photo->storeAs('Products',$fileName,'public');
-            $request->photo = $fileName;
-        }
-       // dd($request->photo);
+            
             $product->update([
-                'title' => $request->title,
+                'name' => $request->name,
+                'price' => $request->price,
+                'photo' => $fileName,
+                'description' => $request->description,
+                'category_id' => $request->category_id,
+            ]);
+        }else{
+            $product->update([
+                'name' => $request->name,
                 'price' => $request->price,
                 'description' => $request->description,
                 'category_id' => $request->category_id,
             ]);
+        }
+       //dd($request->photo);
+
             return redirect()->route('products')->with('message','Product Updated Successfully!');
    }
 }

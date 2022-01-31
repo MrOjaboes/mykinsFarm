@@ -22,6 +22,7 @@
                 <table class="table table-condensed table-hover table-responsive-lg">
                     <thead>
                         <tr>
+                            <th style="width: 300"></th>
                             <th>Name</th>
                             <th>Qty</th>
                             <th>Price</th>
@@ -31,6 +32,7 @@
                     <tbody>
                         @foreach ($cartItems as $item)
                             <tr>
+                                <td><img src="{{ asset('/storage/products/' . $item->attributes->photo) }}" class="w-25 h-25" alt=""></td>
                                 <td>{{ $item->name }}</td>
                                 <td>
                                     <form action="{{ route('cart.update') }}" method="POST">

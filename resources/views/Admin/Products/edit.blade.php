@@ -38,8 +38,8 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Product Title</label>
-                                        <input type="text" class="form-control" value="{{$product->title}}"
-                                            name="title">
+                                        <input type="text" class="form-control" value="{{$product->name}}"
+                                            name="name">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Product Price</label>
@@ -49,9 +49,8 @@
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Product Caption</label>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" name="photo">
-                                            <label class="custom-file-label" for="customFile">Choose file</label>
-                                        </div>
+                                            <input type="file" class="form-control" name="photo">
+                                           </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="">Product Category</label>

@@ -14,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/category/spices&seasonings', function () {
+    return view('Categories.spices_seasoning',['products'=> Product::where('category_id',1)->get()]);
+});
+Route::get('/category/soup-ingredients', function () {
+    return view('Categories.soup_ingredients',['products'=> Product::all()]);
+});
+Route::get('/category/beans&grains', function () {
+    return view('Categories.beans_grains',['products'=> Product::all()]);
+});
+Route::get('/category/dried-vegetable', function () {
+    return view('Categories.dried_vegetables',['products'=> Product::all()]);
+});
+Route::get('/category/flour&swallow', function () {
+    return view('Categories.flour_swallow',['products'=> Product::all()]);
+});
 Route::get('/', function () {
     return view('guest',['products'=> Product::all()]);
 });

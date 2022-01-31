@@ -21,7 +21,7 @@ class Add extends Component
     public function addProduct()
     {
         $validated = Validator::make($this->state,[
-            'title' => 'required',
+            'name' => 'required',
             'price' => 'required',
             'description' => 'required',
             'category_id' => 'required',

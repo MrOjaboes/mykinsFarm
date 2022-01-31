@@ -2,30 +2,34 @@
 @section('content')
 
 <div class="product-area pb-110">
+
     <div class="container">
         <div class="section-title-tab-wrap border-bottom-3 mb-30 pb-15">
             <div class="section-title-3">
                 <h2>Best Sellers</h2>
             </div>
             <div class="tab-style-3 nav">
-                <a class="active" href="#product-1" data-bs-toggle="tab">Top 10 </a>
-                <a href="#product-2" data-bs-toggle="tab"> Womens</a>
-                <a href="#product-3" data-bs-toggle="tab">Mens </a>
-                <a href="#product-4" data-bs-toggle="tab">Kids </a>
-                <a href="#product-5" data-bs-toggle="tab">Accessories </a>
+                <a class="active" href="#product-1" data-bs-toggle="tab">Soups Ingredients</a>
+                <a href="#product-2" data-bs-toggle="tab"> Beans and Grains</a>
+                <a href="#product-3" data-bs-toggle="tab"> Flour and Swallow </a>
+                <a href="#product-4" data-bs-toggle="tab"> Dried Vegetables </a>
+                <a href="#product-5" data-bs-toggle="tab"> Spices and Seasonings </a>
             </div>
         </div>
         <div class="tab-content jump">
+
             <div id="product-1" class="tab-pane active">
                 <div class="product-slider-active-2 dot-style-2 dot-style-2-position-static dot-style-2-mrg-2 dot-style-2-active-black">
+                    @foreach ($products as $product)
+                    @if ($product->category_id == 1)
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-21.jpg" alt=""></a>
+                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
-                                <span>women</span>
-                                <h4><a href="product-details.html">Flower Flanner Check Jacke</a></h4>
+                                <span>{{$product->name}}</span>
+                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
@@ -38,7 +42,7 @@
                                 </div>
                                 <div class="pro-price-action-wrap">
                                     <div class="product-price-3">
-                                        <span>$19.98</span>
+                                        <span>${{$product->price}}</span>
                                     </div>
                                     <div class="product-action-3">
                                         <button title="Wishlist"><i class="icon-heart"></i></button>
@@ -48,283 +52,37 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-24.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-40%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>accessories</span>
-                                <h4><a href="product-details.html">Constrasting Sunglasses</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$23.75</span>
-                                        <span class="old-price">$43.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star "></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star "></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-23.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Hagerstown School Swearshits</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star "></i>
-                                    </div>
-                                    <span>(4)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$29.58</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-26.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Basic Simple Solid Color T-Shirt</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$12.47</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+
                 </div>
             </div>
+
             <div id="product-2" class="tab-pane">
                 <div class="product-slider-active-2 dot-style-2 dot-style-2-position-static dot-style-2-mrg-2 dot-style-2-active-black">
+                    @foreach ($products as $product)
+                    @if ($product->category_id == 2)
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
+                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
+                                <span>{{$product->name}}</span>
+                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-23.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Hagerstown School Swearshits</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
+                                        <i class="icon_star "></i>
                                     </div>
                                     <span>(4)</span>
                                 </div>
                                 <div class="pro-price-action-wrap">
                                     <div class="product-price-3">
-                                        <span>$29.58</span>
+                                        <span>${{$product->price}}</span>
                                     </div>
                                     <div class="product-action-3">
                                         <button title="Wishlist"><i class="icon-heart"></i></button>
@@ -334,377 +92,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-26.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Basic Simple Solid Color T-Shirt</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$12.47</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-21.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women</span>
-                                <h4><a href="product-details.html">Flower Flanner Check Jacke</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$19.98</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-24.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-40%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>accessories</span>
-                                <h4><a href="product-details.html">Constrasting Sunglasses</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$23.75</span>
-                                        <span class="old-price">$43.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+
                 </div>
             </div>
             <div id="product-3" class="tab-pane">
                 <div class="product-slider-active-2 dot-style-2 dot-style-2-position-static dot-style-2-mrg-2 dot-style-2-active-black">
+                    @foreach ($products as $product)
+                    @if ($product->category_id == 3)
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-26.jpg" alt=""></a>
+                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Basic Simple Solid Color T-Shirt</a></h4>
+                                <span>{{$product->name}}</span>
+                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$12.47</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-23.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Hagerstown School Swearshits</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
+                                        <i class="icon_star "></i>
                                     </div>
                                     <span>(4)</span>
                                 </div>
                                 <div class="pro-price-action-wrap">
                                     <div class="product-price-3">
-                                        <span>$29.58</span>
+                                        <span>${{$product->price}}</span>
                                     </div>
                                     <div class="product-action-3">
                                         <button title="Wishlist"><i class="icon-heart"></i></button>
@@ -714,251 +131,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+
                 </div>
             </div>
             <div id="product-4" class="tab-pane">
                 <div class="product-slider-active-2 dot-style-2 dot-style-2-position-static dot-style-2-mrg-2 dot-style-2-active-black">
+                    @foreach ($products as $product)
+                    @if ($product->category_id == 4)
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-24.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-40%</span>
+                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
-                                <span>accessories</span>
-                                <h4><a href="product-details.html">Constrasting Sunglasses</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$23.75</span>
-                                        <span class="old-price">$43.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
+                                <span>{{$product->name}}</span>
+                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-26.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Basic Simple Solid Color T-Shirt</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$12.47</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-21.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women</span>
-                                <h4><a href="product-details.html">Flower Flanner Check Jacke</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$19.98</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-23.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Hagerstown School Swearshits</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
+                                        <i class="icon_star "></i>
                                     </div>
                                     <span>(4)</span>
                                 </div>
                                 <div class="pro-price-action-wrap">
                                     <div class="product-price-3">
-                                        <span>$29.58</span>
+                                        <span>${{$product->price}}</span>
                                     </div>
                                     <div class="product-action-3">
                                         <button title="Wishlist"><i class="icon-heart"></i></button>
@@ -968,329 +170,71 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+
                 </div>
             </div>
             <div id="product-5" class="tab-pane">
                 <div class="product-slider-active-2 dot-style-2 dot-style-2-position-static dot-style-2-mrg-2 dot-style-2-active-black">
+                    @foreach ($products as $product)
+                    @if ($product->category_id == 5)
                     <div class="product-plr-2">
                         <div class="single-product-wrap-2 mb-25">
                             <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
+                                <a href="product-details.html"><img src="{{ asset('/storage/products/' . $product->photo) }}" alt=""></a>
                             </div>
                             <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
+                                <span>{{$product->name}}</span>
+                                <h4><a href="product-details.html">{{$product->name}}</a></h4>
                                 <div class="product-rating-wrap-2">
                                     <div class="product-rating-2">
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
                                         <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-21.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women</span>
-                                <h4><a href="product-details.html">Flower Flanner Check Jacke</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$19.98</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-24.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-40%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>accessories</span>
-                                <h4><a href="product-details.html">Constrasting Sunglasses</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(5)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$23.75</span>
-                                        <span class="old-price">$43.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-26.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Basic Simple Solid Color T-Shirt</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span>$12.47</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-23.jpg" alt=""></a>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Mens</span>
-                                <h4><a href="product-details.html">Hagerstown School Swearshits</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
+                                        <i class="icon_star "></i>
                                     </div>
                                     <span>(4)</span>
                                 </div>
                                 <div class="pro-price-action-wrap">
                                     <div class="product-price-3">
-                                        <span>$29.58</span>
+                                        <span>${{$product->price}}</span>
                                     </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
+                                    <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $product->id }}">
+                                        <input type="hidden" name="name" value="{{ $product->name }}">
+                                        <input type="hidden" name="price" value="{{ $product->price }}">
+                                        <input type="hidden" name="photo" value="{{ $product->photo }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <div class="product-action-3">
+                                            <button title="Wishlist"><i class="icon-heart"></i></button>
+                                            <button title="Compare"><i class="icon-basket-loaded"></i></button>
+                                        </div>
+                                    </form>
+
+
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-22.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-25%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>women, accessories</span>
-                                <h4><a href="product-details.html">Scraf Fabric Wedgesv</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(2)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$13.75</span>
-                                        <span class="old-price">$23.65</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-plr-2">
-                        <div class="single-product-wrap-2 mb-25">
-                            <div class="product-img-2">
-                                <a href="product-details.html"><img src="assets/images/product/product-25.jpg" alt=""></a>
-                                <span class="pro-badge right bg-red">-35%</span>
-                            </div>
-                            <div class="product-content-3">
-                                <span>Women, Shoes</span>
-                                <h4><a href="product-details.html">Fila Simple Sneaker in White Color</a></h4>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-2">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(6)</span>
-                                </div>
-                                <div class="pro-price-action-wrap">
-                                    <div class="product-price-3">
-                                        <span class="new-price">$37.45</span>
-                                        <span class="old-price">$50.55</span>
-                                    </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+
                 </div>
             </div>
         </div>
+
     </div>
+
 </div>
+
+
+
+
+
 {{-- <div class="product-categories-area pb-70">
     <div class="container">
         <div class="section-title-tab-wrap border-bottom-3 mb-50 pb-20">
@@ -1413,7 +357,7 @@
         </div>
     </div>
 </div> --}}
-<div class="banner-area pb-85">
+{{-- <div class="banner-area pb-85">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -1452,8 +396,9 @@
             </div>
         </div>
     </div>
-</div>
-<div class="product-area pb-110">
+</div> --}}
+
+{{-- <div class="product-area pb-110">
     <div class="container">
         <div class="section-title-tab-wrap border-bottom-5 align-items-inherit mb-50">
             <div class="section-title-3">
@@ -3190,8 +2135,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="product-area pb-115">
+</div> --}}
+{{-- <div class="product-area pb-115">
     <div class="container">
         <div class="section-title-tab-wrap border-bottom-5 align-items-inherit mb-50">
             <div class="section-title-3">
@@ -4928,7 +3873,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 {{-- <div class="blog-area bg-gray-3 pt-115 pb-80">
     <div class="container">
         <div class="section-title-tab-wrap mb-35">
@@ -5015,32 +3960,6 @@
         </div>
     </div>
 </div> --}}
-<div class="subscribe-area bg-gray-4 pt-95 pb-95">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-5">
-                <div class="section-title-3">
-                    <h2>Our Newsletter</h2>
-                    <p>Get updates by subscribe our weekly newsletter</p>
-                </div>
-            </div>
-            <div class="col-lg-7 col-md-7">
-                <div id="mc_embed_signup" class="subscribe-form-2">
-                    <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style-2" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="https://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
-                        <div id="mc_embed_signup_scroll" class="mc-form-2">
-                            <input class="email" type="email" required="" placeholder="Enter your email address" name="EMAIL" value="">
-                            <div class="mc-news-2" aria-hidden="true">
-                                <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
-                            </div>
-                            <div class="clear-2">
-                                <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="Subscribe">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 @endsection

@@ -3,7 +3,7 @@
         <div class="card-body">
             <div class="form-group">
                 <label for="exampleInputEmail1">Product Title</label>
-                <input type="text" class="form-control" wire:model="state.title"
+                <input type="text" class="form-control" wire:model="state.name"
                     placeholder="Enter Title">
             </div>
             <div class="form-group">

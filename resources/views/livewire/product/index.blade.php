@@ -43,7 +43,7 @@
                 <tbody>
                  @foreach ($products as $product)
                  <tr>
-                    <td>{{$product->title}}</td>
+                    <td>{{$product->name}}</td>
                     <td>{{$product->created_at}}</td>
                     <td># {{$product->price}}</td>
                     <td><img id="img" src="{{ asset('/storage/products/' .$product->photo) }}"
