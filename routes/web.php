@@ -15,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/category/spices&seasonings', function () {
-    return view('Categories.spices_seasoning',['products'=> Product::where('category_id',1)->get()]);
+    return view('Categories.spices_seasoning',['products'=> Product::where('category_id',5)->get()]);
 });
 Route::get('/category/soup-ingredients', function () {
-    return view('Categories.soup_ingredients',['products'=> Product::all()]);
+    return view('Categories.soup_ingredients',['products'=> Product::where('category_id',1)->get()]);
 });
 Route::get('/category/beans&grains', function () {
-    return view('Categories.beans_grains',['products'=> Product::all()]);
+    return view('Categories.beans_grains',['products'=> Product::where('category_id',2)->get()]);
 });
 Route::get('/category/dried-vegetable', function () {
-    return view('Categories.dried_vegetables',['products'=> Product::all()]);
+    return view('Categories.dried_vegetables',['products'=> Product::where('category_id',4)->get()]);
 });
 Route::get('/category/flour&swallow', function () {
-    return view('Categories.flour_swallow',['products'=> Product::all()]);
+    return view('Categories.flour_swallow',['products'=> Product::where('category_id',3)->get()]);
 });
 Route::get('/', function () {
     return view('guest',['products'=> Product::all()]);

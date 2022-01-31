@@ -95,7 +95,7 @@
                                         <nav>
                                             <ul>
 
-                                                <li class="cr-dropdown"><a href="#">General </a>
+                                                <li class="cr-dropdown"><a href="{{url('/')}}">General </a>
                                                 <li><a href="{{ url('/category/beans&grains') }}">Beans and Grains</a>
                                                 </li>
                                                 <li><a href="{{ url('/category/soup-ingredients') }}">Soup
@@ -250,7 +250,7 @@
                             </nav>
                         </div>
                     </div>
-                    
+
                     <div class="mobile-contact-info mobile-header-padding-border-4">
                         <ul>
                             <li><i class="icon-phone "></i> (+612) 2531 5600</li>

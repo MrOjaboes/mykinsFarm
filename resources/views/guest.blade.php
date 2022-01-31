@@ -17,7 +17,6 @@
             </div>
         </div>
         <div class="tab-content jump">
-
             <div id="product-1" class="tab-pane active">
                 <div class="product-slider-active-2 dot-style-2 dot-style-2-position-static dot-style-2-mrg-2 dot-style-2-active-black">
                     @foreach ($products as $product)
@@ -44,10 +43,17 @@
                                     <div class="product-price-3">
                                         <span>${{$product->price}}</span>
                                     </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
+                                    <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $product->id }}">
+                                        <input type="hidden" name="name" value="{{ $product->name }}">
+                                        <input type="hidden" name="price" value="{{ $product->price }}">
+                                        <input type="hidden" name="photo" value="{{ $product->photo }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <div class="product-action-3">
+                                              <button title="Compare"><i class="icon-basket-loaded"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -84,10 +90,17 @@
                                     <div class="product-price-3">
                                         <span>${{$product->price}}</span>
                                     </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
+                                    <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $product->id }}">
+                                        <input type="hidden" name="name" value="{{ $product->name }}">
+                                        <input type="hidden" name="price" value="{{ $product->price }}">
+                                        <input type="hidden" name="photo" value="{{ $product->photo }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <div class="product-action-3">
+                                             <button title="Compare"><i class="icon-basket-loaded"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -123,10 +136,18 @@
                                     <div class="product-price-3">
                                         <span>${{$product->price}}</span>
                                     </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
+                                    <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $product->id }}">
+                                        <input type="hidden" name="name" value="{{ $product->name }}">
+                                        <input type="hidden" name="price" value="{{ $product->price }}">
+                                        <input type="hidden" name="photo" value="{{ $product->photo }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <div class="product-action-3">
+                                            {{-- <button title="Wishlist"><i class="icon-heart"></i></button> --}}
+                                            <button title="Compare"><i class="icon-basket-loaded"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -162,10 +183,17 @@
                                     <div class="product-price-3">
                                         <span>${{$product->price}}</span>
                                     </div>
-                                    <div class="product-action-3">
-                                        <button title="Wishlist"><i class="icon-heart"></i></button>
-                                        <button title="Compare"><i class="icon-basket-loaded"></i></button>
-                                    </div>
+                                    <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $product->id }}">
+                                        <input type="hidden" name="name" value="{{ $product->name }}">
+                                        <input type="hidden" name="price" value="{{ $product->price }}">
+                                        <input type="hidden" name="photo" value="{{ $product->photo }}">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <div class="product-action-3">
+                                              <button title="Compare"><i class="icon-basket-loaded"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
