@@ -35,7 +35,6 @@
     <div class="main-wrapper">
         <header class="header-area">
             <div class="header-large-device">
-
                 <div class="header-middle header-middle-padding-1">
                     <div class="container">
                         <div class="row align-items-center">
@@ -46,24 +45,32 @@
                             </div>
                             <div class="col-xl-7 col-lg-7">
                                 <div class="categori-search-wrap">
-                                    
                                     <div class="search-wrap-3">
-                                        <form action="#">
-                                            <input placeholder="Search Products..." type="text">
-                                            <button><i class="lnr lnr-magnifier"></i></button>
+                                        <form action="{{route('product.search')}}" method="get">
+                                            @csrf
+                                            <input placeholder="Search Products..." type="text" name="term">
+                                            <button type="submit"><i class="lnr lnr-magnifier"></i></button>
                                         </form>
                                     </div>
+
                                 </div>
+<div>
+    <ul class="list-group">
+        @foreach ($products as $product)
+    <li class="list-group-item">{{$product->name}}</li>
+        @endforeach
+    </ul>
+</div>
                             </div>
                             <div class="col-xl-3 col-lg-3">
                                 <div class="header-action header-action-flex">
                                     <div class="same-style-2 same-style-2-font-inc">
                                         @guest
                                         @if (Route::has('login'))
-                                        <a href="{{route('login')}}"><i class="icon-user"></i>Login</a>
+                                        <a href="{{route('login')}}" ><i class="icon-user"></i><span style="font-size:12px;" class="pl-2">Login</span></a> |
                                         @endif
                                         @if (Route::has('register'))
-                                        <a href="{{route('register')}}"><i class="icon-user"></i>Register</a>
+                                        <a href="{{route('register')}}"><span style="font-size:12px;">Register</span></a>
                                         @endif
                                         @else
                                         <li class="nav-item dropdown" style="list-style-type: none;">
@@ -259,13 +266,13 @@
                                             <h5 class="animated">3 Colors: <span>Grey</span></h5>
                                             <div class="slider-tab-small-img nav animated">
                                                 <a class="active" href="#tshirt-4" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/slider/hm-3-small-tshirt-1.jpg"
+                                                        src="/guest/assets/images/banner/home-1.jpg"
                                                         alt=""> </a>
                                                 <a href="#tshirt-5" data-bs-toggle="tab"> <img
-                                                        src="/guest/assets/images/slider/hm-3-small-tshirt-2.jpg"
+                                                        src="/guest/assets/images/banner/home2.png"
                                                         alt=""> </a>
                                                 <a href="#tshirt-6" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/slider/hm-3-small-tshirt-3.jpg"
+                                                        src="/guest/assets/images/banner/home-1.jpg"
                                                         alt=""> </a>
                                             </div>
                                             <div class="btn-style-3">

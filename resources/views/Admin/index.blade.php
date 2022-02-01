@@ -13,7 +13,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item active">Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -30,9 +30,9 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3>{{$categories}}</h3>
 
-                <p>New Orders</p>
+                <p>Total Categories</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -45,9 +45,9 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+                <h3>{{$products}}</h3>
 
-                <p>Bounce Rate</p>
+                <p>Total Products</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -60,7 +60,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3>{{$users}}</h3>
 
                 <p>User Registrations</p>
               </div>
@@ -75,9 +75,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3>{{$orders}}</h3>
 
-                <p>Unique Visitors</p>
+                <p>Total Orders</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -267,6 +267,7 @@
           </section>
           <!-- right col -->
         </div>
+
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>

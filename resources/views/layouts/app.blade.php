@@ -34,7 +34,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="/AdminUi/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="/guest/assets/images/logo1.png" alt="Logo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -48,7 +48,7 @@
  @yield('content')
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2022 <a href="https://myKinsFarm.com">myKinsFarm</a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="https://myKinsFarm.com">myKinsFarm</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0

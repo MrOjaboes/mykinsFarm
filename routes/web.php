@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Product search
+
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('product.search');
+
 //Admin Login
 Route::get('/admin-login', function () {
     return view('auth.admin_login');
