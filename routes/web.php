@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 //Product search
 
-Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])->name('product.search');
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'searchproduct'])->name('product.search');
 
 //Admin Login
 Route::get('/admin-login', function () {
@@ -64,6 +64,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('Admin');
+Route::get('/admin/orders', [App\Http\Controllers\AdminController::class, 'orders'])->name('admin.orders')->middleware('Admin');
 Route::get('/admin/profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile')->middleware('Admin');
 Route::post('/admin/profile', [App\Http\Controllers\ProfileController::class, 'adminProfile'])->name('admin.profile')->middleware('Admin');
 Route::post('/admin/profile', [App\Http\Controllers\ProfileController::class, 'update_password'])->name('update.password')->middleware('Admin');

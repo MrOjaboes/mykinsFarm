@@ -2,14 +2,14 @@
 
 namespace App\Http\Livewire\Customer;
 
-use App\Models\Product;
+use App\Models\User; 
 use Livewire\Component;
 
 class Index extends Component
 {
     public function render()
     {
-        $products = Product::all();
-        return view('livewire.customer.index',compact('products'));
+        $users = User::where('user_type',0)->get();
+        return view('livewire.customer.index',compact('users'));
     }
 }

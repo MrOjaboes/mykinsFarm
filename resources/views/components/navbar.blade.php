@@ -5,10 +5,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="{{route('admin')}}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="{{route('customers')}}" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -36,12 +36,12 @@
         </div>
       </li>
 
-      
+
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#"> 
+        <a class="nav-link" data-toggle="dropdown" href="#">
           <b>  {{Auth::user()->name}}</b>
-          <i class="right fas fa-angle-down"></i> 
+          <i class="right fas fa-angle-down"></i>
           </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
            <div class="dropdown-divider"></div>
@@ -49,11 +49,11 @@
             <i class="nav-icon fas fa-cogs mr-2"></i>Profile
             </a>
           <div class="dropdown-divider"></div>
-          
+
              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
              document.getElementById('logout-form').submit();">
            <i class="nav-icon fas fa-sign-out-alt mr-2"></i>
-            Logout 
+            Logout
        </a>
 
        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -66,6 +66,6 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      
+
     </ul>
   </nav>

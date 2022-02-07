@@ -7,17 +7,17 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function search(Request $request)
+    public function searchproduct(Request $request)
     {
-
         $data = request()->validate([
-            'query' => 'required|min:3',
+            'term' => 'required|min:3',
+
         ]);
-        dd($data);
-        $query = $data;
-       // dd($request->term);
-        $products = Product::where('name','like', "%$query%")
-         ->get('name');
-         return view('guest',compact('products'));
+        $query = $data['term'];
+
+       //dd($request->term);
+        $prod = Product::where('price','like', "%$query%")
+         ->get();
+         return view('layouts.front',compact('prod'));
     }
 }

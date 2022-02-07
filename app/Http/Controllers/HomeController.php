@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -24,8 +26,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('home',compact('products'));
+
+        return view('home');
     }
 
+    public static function GetProductById($product_id){
+        //$user = User::first('id', $user_id);
+      $product = DB::table('products')->where('id', $product_id)->first();
+      //dd($user);
+      return $product->name;
+  }
+    public static function GetUserById($user_id){
+        //$user = User::first('id', $user_id);
+      $user = DB::table('users')->where('id', $user_id)->first();
+      //dd($user);
+      return $user->name;
+  }
 }

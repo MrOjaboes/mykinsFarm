@@ -40,56 +40,60 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="{{url('/')}}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
+                                    <a href="{{ url('/') }}"><img src="/guest/assets/images/logo1.png"
+                                            alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-xl-7 col-lg-7">
                                 <div class="categori-search-wrap">
                                     <div class="search-wrap-3">
-                                        <form action="{{route('product.search')}}" method="get">
-                                            @csrf
+                                        <form action="" method="get">
                                             <input placeholder="Search Products..." type="text" name="term">
                                             <button type="submit"><i class="lnr lnr-magnifier"></i></button>
                                         </form>
                                     </div>
 
                                 </div>
-<div>
-    <ul class="list-group">
-        @foreach ($products as $product)
-    <li class="list-group-item">{{$product->name}}</li>
-        @endforeach
-    </ul>
-</div>
+
                             </div>
                             <div class="col-xl-3 col-lg-3">
                                 <div class="header-action header-action-flex">
                                     <div class="same-style-2 same-style-2-font-inc">
                                         @guest
-                                        @if (Route::has('login'))
-                                        <a href="{{route('login')}}" ><i class="icon-user"></i><span style="font-size:12px;" class="pl-2">Login</span></a> |
-                                        @endif
-                                        @if (Route::has('register'))
-                                        <a href="{{route('register')}}"><span style="font-size:12px;">Register</span></a>
-                                        @endif
+                                            @if (Route::has('login'))
+                                                <a href="{{ route('login') }}"><i class="icon-user"></i><span
+                                                        style="font-size:12px;" class="pl-2">Login</span></a> |
+                                            @endif
+                                            @if (Route::has('register'))
+                                                <a href="{{ route('register') }}"><span
+                                                        style="font-size:12px;">Register</span></a>
+                                            @endif
                                         @else
-                                        <li class="nav-item dropdown" style="list-style-type: none;">
-                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                {{ Auth::user()->name }}
-                                            </a>
-
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                                   onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
+                                            <li class="nav-item dropdown" style="list-style-type: none;">
+                                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#"
+                                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false" v-pre>
+                                                    {{ Auth::user()->name }}
                                                 </a>
 
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
-                                                </form>
-                                            </div>
-                                        </li>
+                                                <div class="dropdown-menu dropdown-menu-right"
+                                                    aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                                     document.getElementById('logout-form').submit();">
+                                                        <span style="font-size:15px;">Log out</span>
+                                                    </a>
+                                                    <hr>
+
+
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                        class="d-none">
+                                                        @csrf
+                                                    </form>
+                                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                                        <span style="font-size:15px;">Orders</span>
+                                                    </a>
+                                                </div>
+                                            </li>
                                         @endguest
                                     </div>
                                     {{-- <div class="same-style-2 same-style-2-font-inc">
@@ -97,8 +101,9 @@
                                                 class="pro-count green">03</span></a>
                                     </div> --}}
                                     <div class="same-style-2 same-style-2-font-inc header-cart">
-                                        <a class="" href="{{route('cart.list')}}">
-                                            <i class="icon-basket-loaded"></i><span class="pro-count green"> {{ Cart::getTotalQuantity()}}</span>
+                                        <a class="" href="{{ route('cart.list') }}">
+                                            <i class="icon-basket-loaded"></i><span class="pro-count green">
+                                                {{ Cart::getTotalQuantity() }}</span>
                                             <span class="cart-amount">${{ Cart::getTotal() }}</span>
                                         </a>
                                     </div>
@@ -107,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- Categories  --}}
+                {{-- Categories --}}
                 <div class="header-bottom">
                     <div class="container">
                         <div class="row align-items-center">
@@ -119,16 +124,20 @@
                                         <nav>
                                             <ul>
 
-                                                <li class="cr-dropdown"><a href="{{url('/')}}">General </a>
-                                                <li><a href="{{ url('/category/beans&grains') }}">Beans and Grains</a>
+                                                <li class="cr-dropdown"><a href="{{ url('/') }}">General </a>
+                                                <li><a href="{{ url('/category/beans&grains') }}">Beans and
+                                                        Grains</a>
                                                 </li>
                                                 <li><a href="{{ url('/category/soup-ingredients') }}">Soup
                                                         Ingredients</a></li>
-                                                <li><a href="{{ url('/category/flour&swallow') }}">Flour and Swallow</a>
+                                                <li><a href="{{ url('/category/flour&swallow') }}">Flour and
+                                                        Swallow</a>
                                                 </li>
-                                                <li><a href="{{ url('/category/dried-vegetable') }}">Dried Vegetable</a>
+                                                <li><a href="{{ url('/category/dried-vegetable') }}">Dried
+                                                        Vegetable</a>
                                                 </li>
-                                                <li><a href="{{ url('/category/spices&seasonings') }}">Spices and Seasonings</a></li>
+                                                <li><a href="{{ url('/category/spices&seasonings') }}">Spices and
+                                                        Seasonings</a></li>
 
 
                                                 </li>
@@ -142,9 +151,9 @@
                                 <div class="main-menu main-menu-padding-1 main-menu-font-size-14 main-menu-lh-2">
                                     <nav>
                                         <ul>
-                                            <li><a href="{{url('/')}}">HOME </a></li>
-                                            <li><a href="{{url('/')}}">SHOP </a></li>
-                                            <li><a href="{{url('/')}}">CONTACT </a></li>
+                                            <li><a href="{{ url('/') }}">HOME </a></li>
+                                            <li><a href="{{ url('/') }}">SHOP </a></li>
+                                            <li><a href="{{ url('/') }}">CONTACT </a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -164,21 +173,22 @@
                     <div class="row align-items-center">
                         <div class="col-5">
                             <div class="mobile-logo">
-                                <a href="{{url('/')}}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
+                                <a href="{{ url('/') }}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-7">
                             <div class="header-action header-action-flex">
                                 <div class="same-style-2 same-style-2-font-inc">
-                                    <a href="{{route('login')}}"><i class="icon-user"></i></a>
+                                    <a href="{{ route('login') }}"><i class="icon-user"></i></a>
                                 </div>
                                 {{-- <div class="same-style-2 same-style-2-font-inc">
                                     <a href="wishlist.html"><i class="icon-heart"></i><span
                                             class="pro-count green">03</span></a>
                                 </div> --}}
                                 <div class="same-style-2 same-style-2-font-inc header-cart">
-                                    <a class="cart-active" href="{{route('cart.list')}}">
-                                        <i class="icon-basket-loaded"></i><span class="pro-count green">{{ Cart::getTotalQuantity()}}</span>
+                                    <a class="cart-active" href="{{ route('cart.list') }}">
+                                        <i class="icon-basket-loaded"></i><span
+                                            class="pro-count green">{{ Cart::getTotalQuantity() }}</span>
                                     </a>
                                 </div>
                                 <div class="same-style-2 main-menu-icon">
@@ -209,9 +219,9 @@
                         <!-- mobile menu start -->
                         <nav>
                             <ul class="mobile-menu">
-                                <li><a href="{{url('/')}}">HOME </a></li>
-                                <li><a href="{{url('/')}}">SHOP </a></li>
-                                <li><a href="{{url('/')}}">CONTACT </a></li>
+                                <li><a href="{{ url('/') }}">HOME </a></li>
+                                <li><a href="{{ url('/') }}">SHOP </a></li>
+                                <li><a href="{{ url('/') }}">CONTACT </a></li>
                             </ul>
                         </nav>
                         <!-- mobile menu end -->
@@ -223,12 +233,13 @@
                         <div class="categori-hide-2">
                             <nav>
                                 <ul class="mobile-menu">
-                                    <li class="cr-dropdown"><a href="{{url('/')}}">General </a></li>
+                                    <li class="cr-dropdown"><a href="{{ url('/') }}">General </a></li>
                                     <li><a href="{{ url('/category/beans&grains') }}">Beans and Grains</a></li>
                                     <li><a href="{{ url('/category/soup-ingredients') }}">Soup Ingredients</a></li>
                                     <li><a href="{{ url('/category/flour&swallow') }}">Flour and Swallow</a></li>
                                     <li><a href="{{ url('/category/dried-vegetable') }}">Dried Vegetables</a></li>
-                                    <li><a href="{{ url('/category/spices&seasonings') }}">Spices and Seasonings</a></li>
+                                    <li><a href="{{ url('/category/spices&seasonings') }}">Spices and Seasonings</a>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -259,24 +270,17 @@
                                 <div class="row align-items-center slider-animated-1">
                                     <div class="col-lg-7 col-md-7 col-sm-7 col-12">
                                         <div class="hero-slider-content-3 slider-animated-1">
-                                            <h4 class="animated">New Arrivals</h4>
+                                            {{-- <h4 class="animated">New Arrivals</h4>
                                             <h1 class="animated">Basic thick knit <br>T-shirt</h1>
                                             <p class="animated">Men's basic coat with a high lapel collar and
-                                                side pockets with button fastening.</p>
-                                            <h5 class="animated">3 Colors: <span>Grey</span></h5>
+                                                side pockets with button fastening.</p> --}}
+                                            {{-- <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
                                             <div class="slider-tab-small-img nav animated">
                                                 <a class="active" href="#tshirt-4" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/banner/home-1.jpg"
-                                                        alt=""> </a>
-                                                <a href="#tshirt-5" data-bs-toggle="tab"> <img
-                                                        src="/guest/assets/images/banner/home2.png"
-                                                        alt=""> </a>
-                                                <a href="#tshirt-6" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/banner/home-1.jpg"
-                                                        alt=""> </a>
+                                                        src="/guest/assets/images/banner/home-1.jpg" alt=""> </a>
                                             </div>
                                             <div class="btn-style-3">
-                                                <a class="animated btn-1-padding-1" href="product-details.html">Shop
+                                                <a class="animated btn-1-padding-1" href="">Shop
                                                     now <i class="icon-arrow-right"></i></a>
                                             </div>
                                         </div>
@@ -312,24 +316,20 @@
                                 <div class="row align-items-center slider-animated-1">
                                     <div class="col-lg-7 col-md-7 col-sm-7 col-12">
                                         <div class="hero-slider-content-3">
-                                            <h4 class="animated">New Arrivals</h4>
+                                            {{-- <h4 class="animated">New Arrivals</h4>
                                             <h1 class="animated">Basic thick knit <br>T-shirt</h1>
                                             <p class="animated">Men's basic coat with a high lapel collar and
                                                 side pockets with button fastening.</p>
-                                            <h5 class="animated">3 Colors: <span>Grey</span></h5>
+                                            <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
                                             <div class="slider-tab-small-img nav animated">
                                                 <a href="#tshirt-7" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/slider/hm-3-small-tshirt-1.jpg"
+                                                        src="/guest/assets/images/banner/home2.png"
                                                         alt=""> </a>
-                                                <a class="active" href="#tshirt-8" data-bs-toggle="tab"> <img
-                                                        src="/guest/assets/images/slider/hm-3-small-tshirt-2.jpg"
-                                                        alt=""> </a>
-                                                <a href="#tshirt-9" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/slider/hm-3-small-tshirt-3.jpg"
-                                                        alt=""> </a>
+
+
                                             </div>
                                             <div class="btn-style-3">
-                                                <a class="animated btn-1-padding-1" href="product-details.html">Shop
+                                                <a class="animated btn-1-padding-1" href="">Shop
                                                     now <i class="icon-arrow-right"></i></a>
                                             </div>
                                         </div>
@@ -426,10 +426,12 @@
                                     <ul>
 
                                         <li><a href="{{ url('/category/beans&grains') }}">Beans and Grains</a></li>
-                                        <li><a href="{{ url('/category/soup-ingredients') }}">Soup Ingredients</a></li>
+                                        <li><a href="{{ url('/category/soup-ingredients') }}">Soup Ingredients</a>
+                                        </li>
                                         <li><a href="{{ url('/category/flour&swallow') }}">Flour and Swallow</a></li>
                                         <li><a href="{{ url('/category/dried-vegetable') }}">Dried Vegetable</a></li>
-                                        <li><a href="{{ url('/category/spices&seasonings') }}">Spices and Seasonings</a></li>
+                                        <li><a href="{{ url('/category/spices&seasonings') }}">Spices and
+                                                Seasonings</a></li>
 
                                     </ul>
                                 </div>
@@ -612,7 +614,8 @@
                                     <div class="product-details-meta">
                                         <ul>
                                             <li><span>Categories:</span> <a href="#">Woman,</a> <a href="#">Dress,</a>
-                                                <a href="#">T-Shirt</a></li>
+                                                <a href="#">T-Shirt</a>
+                                            </li>
                                             <li><span>Tag: </span> <a href="#">Fashion,</a> <a href="#">Mentone</a> , <a
                                                     href="#">Texas</a></li>
                                         </ul>

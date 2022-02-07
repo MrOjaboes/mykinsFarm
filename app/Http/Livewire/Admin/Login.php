@@ -25,12 +25,12 @@ class Login extends Component
 
                   break;
                 default:
-                return redirect()->route('admin.login');
+                return redirect()->back()->with('error','Something went wrong pls try again.');
               }
 
        }else{
             return redirect()->back()->with('error','Email And Password Do not Match.');
         }
-        dd('ok');
+
     }
 }

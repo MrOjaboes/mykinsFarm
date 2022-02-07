@@ -30,4 +30,9 @@ class AdminController extends Controller
     {
         return view('Admin.categories.index');
     }
+    public function orders()
+    {
+        return view('Admin.orders');
+    }
+   
 }

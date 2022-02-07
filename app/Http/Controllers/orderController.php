@@ -17,12 +17,12 @@ class orderController extends Controller
         $order = new Order();
         $order->user_id = auth()->id();
         $order->order_number = uniqid('order_number');
-        $order->shipping_fullname = $request->shipping_fullname;
+        $order->shipping_fullname = $request->shipping_fname .' '. $request->shipping_lname;
         $order->shipping_address = $request->shipping_address;
         $order->shipping_contact = $request->shipping_contact;
         $order->shipping_state = $request->shipping_state;
         $order->shipping_city = $request->shipping_city;
-        if(!$request->has('billing_fullname')){
+        if(!$request->has('billing_fname')){
             $order->billing_fullname = $request->shipping_fullname;
             $order->billing_address = $request->shipping_address;
             $order->billing_contact = $request->shipping_contact;
