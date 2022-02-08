@@ -42,7 +42,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="{{ url('/') }}"><img src=" "
+                                    <a href="{{ url('/') }}"><img src="/guest/assets/images/kins_international_market_logo.png"
                                             alt="logo"></a>
                                 </div>
                             </div>
@@ -452,13 +452,13 @@
                                 <h3 class="footer-title">useful links</h3>
                                 <div class="footer-info-list">
                                     <ul>
-                                        <li><a href="my-account.html">My Account</a></li>
-                                        <li><a href="wishlist.html">My Wishlish</a></li>
+                                        <li><a href="">My Account</a></li>
+                                        <li><a href="">My Wishlish</a></li>
                                         <li><a href="#">Term & Conditions</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#">Track Order</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="">Shop</a></li>
+                                        <li><a href="">About Us</a></li>
                                         <li><a href="#">Returns/Exchange</a></li>
                                         <li><a href="#">FAQs</a></li>
                                     </ul>
@@ -511,9 +511,9 @@
                 <div class="container">
                     <div class="row flex-row-reverse">
                         <div class="col-lg-6 col-md-6">
-                            <div class="payment-img payment-img-right">
+                            {{-- <div class="payment-img payment-img-right">
                                 <a href="#"><img src="/guest/assets/images/Kins_International_Market_Logo_V1.png" class="w-100 h-100"></a>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="copyright copyright-center">
@@ -524,6 +524,8 @@
                 </div>
             </div>
         </footer>
+
+
 
     </div>
 

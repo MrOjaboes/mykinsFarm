@@ -9,7 +9,7 @@ class Index extends Component
 {
     public function render()
     {
-        $products = Product::all();
+        $products = Product::orderBy('created_at','DESC')->get();
         return view('livewire.product.index',compact('products'));
     }
     public function delete($id)

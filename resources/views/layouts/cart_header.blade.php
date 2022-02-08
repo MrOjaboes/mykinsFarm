@@ -43,7 +43,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="{{url('/')}}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
+                                    <a href="{{url('/')}}"><img src="/guest/assets/images/kins_international_market_logo.png" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-xl-7 col-lg-7">
@@ -247,10 +247,12 @@
                                     <ul>
 
                                         <li><a href="{{ url('/category/beans&grains') }}">Beans and Grains</a></li>
-                                        <li><a href="{{ url('/category/soup-ingredients') }}">Soup Ingredients</a></li>
+                                        <li><a href="{{ url('/category/soup-ingredients') }}">Soup Ingredients</a>
+                                        </li>
                                         <li><a href="{{ url('/category/flour&swallow') }}">Flour and Swallow</a></li>
                                         <li><a href="{{ url('/category/dried-vegetable') }}">Dried Vegetable</a></li>
-                                        <li><a href="{{ url('/category/spices&seasonings') }}">Spices and Seasonings</a></li>
+                                        <li><a href="{{ url('/category/spices&seasonings') }}">Spices and
+                                                Seasonings</a></li>
 
                                     </ul>
                                 </div>
@@ -261,13 +263,13 @@
                                 <h3 class="footer-title">useful links</h3>
                                 <div class="footer-info-list">
                                     <ul>
-                                        <li><a href="my-account.html">My Account</a></li>
-                                        <li><a href="wishlist.html">My Wishlish</a></li>
+                                        <li><a href="">My Account</a></li>
+                                        <li><a href="">My Wishlish</a></li>
                                         <li><a href="#">Term & Conditions</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#">Track Order</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="">Shop</a></li>
+                                        <li><a href="">About Us</a></li>
                                         <li><a href="#">Returns/Exchange</a></li>
                                         <li><a href="#">FAQs</a></li>
                                     </ul>
@@ -320,14 +322,13 @@
                 <div class="container">
                     <div class="row flex-row-reverse">
                         <div class="col-lg-6 col-md-6">
-                            <div class="payment-img payment-img-right">
-                                <a href="#"><img src="/guest/assets/images/icon-img/payment.png" alt=""></a>
-                            </div>
+                            {{-- <div class="payment-img payment-img-right">
+                                <a href="#"><img src="/guest/assets/images/Kins_International_Market_Logo_V1.png" class="w-100 h-100"></a>
+                            </div> --}}
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="copyright copyright-center">
-                                <p>Copyright © 2021 HasThemes | <a href="https://hasthemes.com/">Built with
-                                        <span>Norda</span> by HasThemes</a>.</p>
+                                <p>Copyright © 2021 Kins International Market</p>
                             </div>
                         </div>
                     </div>
