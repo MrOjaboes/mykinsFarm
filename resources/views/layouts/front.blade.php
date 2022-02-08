@@ -27,35 +27,41 @@
     <link rel="stylesheet" href="/guest/assets/css/plugins/magnific-popup.css">
     <link rel="stylesheet" href="/guest/assets/css/plugins/jquery-ui.css">
     <link rel="stylesheet" href="/guest/assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
 <body>
 
     <div class="main-wrapper">
-        <header class="header-area">
+        <header class="header-area" style="background-color: #891e19">
             <div class="header-large-device">
                 <div class="header-middle header-middle-padding-1">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="{{ url('/') }}"><img src="/guest/assets/images/Kins_International_Market_Logo_V1.png"
+                                    <a href="{{ url('/') }}"><img src=" "
                                             alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-xl-7 col-lg-7">
                                 <div class="categori-search-wrap">
                                     <div class="search-wrap-3">
-                                        <form action="" method="get">
-                                            <input placeholder="Search Products..." type="text" name="term">
-                                            <button type="submit"><i class="lnr lnr-magnifier"></i></button>
-                                        </form>
+
+                                            <input placeholder="Search Products..." type="text" id="product_name" name="">
+
+
+                                        <ul>
+                                            <li></li>
+                                        </ul>
                                     </div>
 
                                 </div>
 
                             </div>
+                            {{-- Cart environment --}}
                             <div class="col-xl-3 col-lg-3">
                                 <div class="header-action header-action-flex">
                                     <div class="same-style-2 same-style-2-font-inc">
@@ -523,11 +529,21 @@
 
     <!-- All JS is here
 ============================================ -->
-
+<script>
+   var path ="{{url('/search')}}";
+$('#product_name').typeaheead({
+    source: function(query,process){
+        return $.get(path, {query:query}, function(data){
+            return process(data);
+        });
+    }
+});
+</script>
     <script src="/guest/assets/js/vendor/modernizr-3.11.7.min.js"></script>
     <script src="/guest/assets/js/vendor/jquery-v3.6.0.min.js"></script>
     <script src="/guest/assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
     <script src="/guest/assets/js/vendor/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js" integrity="sha512-P2Z/b+j031xZuS/nr8Re8dMwx6pNIexgJ7YqcFWKIqCdbjynk4kuX/GrqpQWEcI94PRCyfbUQrjRcWMi7btb0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/guest/assets/js/vendor/bootstrap.min.js"></script>
     <script src="/guest/assets/js/plugins/slick.js"></script>
     <script src="/guest/assets/js/plugins/jquery.syotimer.min.js"></script>

@@ -3661,7 +3661,7 @@ textarea:focus {
 }
 
 .header-action .same-style-2 a:hover {
-  color: #ff2f2f;
+  color: #fff;
 }
 
 .header-action .same-style-2.same-style-2-white a {
@@ -3669,7 +3669,7 @@ textarea:focus {
 }
 
 .header-action .same-style-2.same-style-2-white a:hover {
-  color: #ff2f2f;
+  color: #fff;
 }
 
 .header-action .same-style-2.same-style-2-white.same-style-2-hover-black a:hover {
@@ -3684,7 +3684,7 @@ textarea:focus {
 }
 
 .header-action .same-style-2.header-cart a span.cart-amount {
-  color: #df3434;
+  color: #fff;
   font-weight: 600;
   font-size: 14px;
   margin: 8px 0 0 16px;
@@ -4419,7 +4419,7 @@ textarea:focus {
 }
 
 .main-categori-wrap > a {
-  color: #45A314;
+  color: #ffff;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -5826,7 +5826,7 @@ textarea:focus {
 }
 
 .btn-style-1 a:hover {
-  background-color: #ff2f2f;
+  background-color: #891E19;
 }
 
 @media only screen and (max-width: 767px) {
@@ -6995,7 +6995,7 @@ textarea:focus {
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #47A413;
+  background-color: #891e19;
   padding: 12px 27px 11px;
 }
 
@@ -7011,7 +7011,7 @@ textarea:focus {
 }
 
 .btn-style-3 a:hover {
-  background-color: #000000;
+  background-color: #891f198c;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8637,9 +8637,22 @@ textarea:focus {
     font-weight: 600;
     color: #fff;
     border-radius: 3rem;
-    background-color: brown;
+    background-color: #891e19;
 }
-
+.btn-checkout{
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 18px 10px 17px;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: .3px;
+    background-color: #891e19;
+    border-style: none;
+    width: 200px;
+}
 .single-product-wrap {
   position: relative;
   overflow: hidden;
@@ -8677,11 +8690,11 @@ textarea:focus {
 }
 
 .single-product-wrap .product-img span.pro-badge.bg-black {
-  background-color: #000000;
+  background-color: #891E19;
 }
 
 .single-product-wrap .product-img span.pro-badge.bg-red {
-  background-color: #ff2f2f;
+  background-color: #891E19;
 }
 
 .single-product-wrap .product-img .product-action-2 {
@@ -8883,7 +8896,7 @@ textarea:focus {
 }
 
 .single-product-wrap .product-img .product-action-wrap .product-action-left button:hover {
-  color: #ff2f2f;
+  color: #891E19;
 }
 
 .single-product-wrap .product-img .product-action-wrap .product-action-right {
@@ -9299,7 +9312,7 @@ textarea:focus {
   border: none;
   font-weight: bold;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #891e19;
   font-size: 13px;
   padding: 4px 20px 4px;
   border-radius: 50px;
@@ -9309,7 +9322,7 @@ textarea:focus {
 }
 
 .single-product-wrap .product-content-wrap-3 .pro-add-to-cart-2 button:hover {
-  background-color: #ff2f2f;
+  background-color: #891e19;
 }
 
 .single-product-wrap .product-content-wrap-3 .product-author {
@@ -10145,17 +10158,17 @@ textarea:focus {
 }
 
 .tab-style-3 a:hover {
-  color: brown;
+  color: #fff;
 }
 .tab-style-1 a:hover {
-  color: brown;
+  color: #fff;
 }
 
 .tab-style-3 a.active {
     font-weight: 600;
     color: #fff;
     border-radius: 3rem;
-    background-color: brown;
+    background-color: #891e19;
 }
 .ct-button{
     font-weight: 600;
@@ -14834,7 +14847,7 @@ textarea:focus {
   letter-spacing: .75px;
   padding: 0 30px;
   color: #ffffff;
-  background-color: #47A413;
+  background-color: #891E19;
 }
 
 @media only screen and (max-width: 767px) {
@@ -18944,7 +18957,7 @@ h3.cart-page-title {
 }
 
 .grand-totall h4.grand-totall-title {
-  color: #ff2f2f;
+  color: #891e19;
   font-size: 20px;
   font-weight: 500;
   margin: 0 0 25px;
@@ -18952,6 +18965,7 @@ h3.cart-page-title {
 
 .grand-totall h4.grand-totall-title span {
   float: right;
+  color: #891e19 ;
 }
 
 .grand-totall a {
@@ -19401,7 +19415,7 @@ h3.cart-page-title {
   content: "";
   left: 0;
   bottom: -12px;
-  background-color: #ff2f2f;
+  background-color: #891e19;
   width: 50px;
   height: 2px;
 }
@@ -19591,7 +19605,7 @@ h3.cart-page-title {
   content: "";
   left: 0;
   bottom: -12px;
-  background-color: #ff2f2f;
+  background-color: #891e19;
   width: 50px;
   height: 2px;
 }
@@ -19609,7 +19623,7 @@ h3.cart-page-title {
 
 .your-order-area .your-order-wrap .your-order-info ul li span {
   float: right;
-  color: #ff2f2f;
+  color: #891e19;
 }
 
 .your-order-area .your-order-wrap .your-order-info.order-subtotal {

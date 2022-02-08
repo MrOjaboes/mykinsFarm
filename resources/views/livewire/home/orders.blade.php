@@ -8,6 +8,7 @@
             <th>Qty</th>
             <th>Status</th>
             <th>Price</th>
+            <th>Payment Method</th>
             <th>Date</th>
         </tr>
     </thead>
@@ -18,9 +19,9 @@
         <td> {{App\Http\Controllers\HomeController::GetProductById($order->product_id)}} </td>
         <td>{{$order->item_count}}</td>
         <td>{{$order->status}}</td>
-        <td>$ {{$order->grand_total}}</td>
-        <td>$ {{$order->payment_method}}</td>
-        <td>{{$order->created_at}}</td>
+        <td>${{$order->grand_total}}</td>
+        <td>{{$order->payment_method}}</td>
+        <td>{{\Carbon\Carbon::parse($order->created_at)->format('D m, M Y')}}</td>
     </tr>
        @endforeach
     </tbody>
@@ -29,4 +30,4 @@
 <span>No Order Availabe</span>
    @endif
    </div>
-</div>
+</div> 

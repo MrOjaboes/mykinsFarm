@@ -4,10 +4,14 @@ namespace App\Http\Livewire\Home;
 
 use App\Models\Order;
 use Livewire\Component;
+use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
 
 class Orders extends Component
 {
+
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public function render()
     {
         $orders = DB::table("orders")

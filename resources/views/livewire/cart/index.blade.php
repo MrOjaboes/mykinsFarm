@@ -1,3 +1,4 @@
+@if ($cartItems->count() > 0)
 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
     <div class="table-content table-responsive cart-table-content">
         <table class="">
@@ -43,12 +44,12 @@
         <div class="col-lg-12">
             <div class="cart-shiping-update-wrapper">
                 <div class="cart-shiping-update">
-                    <a href="{{ url('/') }}" style="background-color:#47A413;color:white;">Continue
+                    <a href="{{ url('/') }}" style="background-color:#891e19;color:white;">Continue
                         Shopping</a>
                 </div>
                 <div class="cart-clear">
 
-                    <a href="#" style="background-color:#47A413;color:white;" wire:click.prevent="clearCart">Clear Cart</a>
+                    <a href="#" style="background-color:#891e19;color:white;" wire:click.prevent="clearCart">Clear Cart</a>
                 </div>
             </div>
         </div>
@@ -70,8 +71,11 @@
                 </ul>
             </div>
             <h4 class="grand-totall-title">Grand Total <span>${{ Cart::getTotal() }}</span></h4>
-            <a href="{{route('checkout')}}" style="background-color:#47A413;color:white;">Proceed to Checkout</a>
+            <a href="{{route('checkout')}}" class="" style="background-color:#891e19;color:white;">Proceed to Checkout</a>
         </div>
     </div>
 
 </div>
+@else
+<h5>Your Cart is currently empty!Try <a href="{{url('/')}}" style="color: #891e19">add new item</a></h5>
+@endif

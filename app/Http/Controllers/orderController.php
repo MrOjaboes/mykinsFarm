@@ -17,13 +17,14 @@ class orderController extends Controller
         $order = new Order();
         $order->user_id = auth()->id();
         $order->order_number = uniqid('order_number');
-        $order->shipping_fullname = $request->shipping_fname .' '. $request->shipping_lname;
+        $order->shipping_fullname = $request->fname .' '. $request->lname;
         $order->shipping_address = $request->shipping_address;
         $order->shipping_contact = $request->shipping_contact;
         $order->shipping_state = $request->shipping_state;
         $order->shipping_city = $request->shipping_city;
+        $order->note = $request->note;
         if(!$request->has('billing_fname')){
-            $order->billing_fullname = $request->shipping_fullname;
+            $order->billing_fullname = $request->fname .' '. $request->lname;
             $order->billing_address = $request->shipping_address;
             $order->billing_contact = $request->shipping_contact;
             $order->billing_state = $request->shipping_state;
@@ -37,18 +38,25 @@ class orderController extends Controller
         }
         $order->grand_total = \Cart::getTotal();
         $order->item_count = \Cart::getTotalQuantity();
+        if($request->payment_method == "Cash On Delivery"){
+            $order->payment_method = "Cash On Delivery";
+          }elseif($request->payment_method == "Paypal"){
+            $order->payment_method = "Paypal";
+          }
         $order->save();
         //save order items
         $cartItems = \Cart::getContent();
         foreach($cartItems as $item){
      $order->items()->attach($item->id,['price'=> $item->price,'quantity'=>$item->quantity]);
         }
+        //Payment Method
+
         //clear cart
         \Cart::clear();
-//send mail to customer
+     //send mail to customer
 
         //take user to thank you page
-        return 'order completed';
+        return view('thank_you');
 
        //dd(auth()->user()->id);
     }

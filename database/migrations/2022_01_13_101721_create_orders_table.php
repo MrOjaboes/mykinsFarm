@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->enum('status',['pending','processing','completed','decline']);
             $table->float('grand_total');
             $table->integer('item_count');
-            $table->string('payment_method')->default('cash_on_delivery');
+            $table->string('payment_method');
             $table->boolean('is_paid')->default(false);
 
             $table->string('shipping_fullname');

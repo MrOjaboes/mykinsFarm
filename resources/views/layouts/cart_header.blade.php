@@ -35,7 +35,7 @@
 <body>
 
     <div class="main-wrapper">
-        <header class="header-area">
+        <header class="header-area pb-3" style="background-color: #891e19">
             <div class="header-large-device">
 
                 <div class="header-middle header-middle-padding-1">
@@ -47,23 +47,15 @@
                                 </div>
                             </div>
                             <div class="col-xl-7 col-lg-7">
-                                <div class="categori-search-wrap">
-                                    <div class="categori-style-1">
-                                        <select class="nice-select nice-select-style-1">
-                                            <option>All Categories </option>
-                                            <option>Clothing </option>
-                                            <option>T-Shirt</option>
-                                            <option>Shoes</option>
-                                            <option>Jeans</option>
-                                        </select>
-                                    </div>
+                                {{-- <div class="categori-search-wrap">
+
                                     <div class="search-wrap-3">
                                         <form action="#">
                                             <input placeholder="Search Products..." type="text">
                                             <button><i class="lnr lnr-magnifier"></i></button>
                                         </form>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="col-xl-3 col-lg-3">
                                 <div class="header-action header-action-flex">

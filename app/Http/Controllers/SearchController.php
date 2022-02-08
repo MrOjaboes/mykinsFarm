@@ -9,15 +9,12 @@ class SearchController extends Controller
 {
     public function searchproduct(Request $request)
     {
-        $data = request()->validate([
-            'term' => 'required|min:3',
-
-        ]);
-        $query = $data['term'];
-
+        $data = request()->all();
+        $query = $data['query'];
        //dd($request->term);
-        $prod = Product::where('price','like', "%$query%")
+        $prod = Product::select('name')
+        ->where('name','like', '%'.$query.'%')
          ->get();
-         return view('layouts.front',compact('prod'));
+         return response()->json($prod);
     }
 }
