@@ -63,13 +63,13 @@
             </div>
             <h5>Total products <span>{{ Cart::getTotalQuantity()}}</span></h5>
             <h5>Total products Price<span>${{ Cart::getTotal() }}</span></h5>
-            <div class="total-shipping">
+            {{-- <div class="total-shipping">
                 <h5>Total shipping</h5>
                 <ul>
                     <li><input type="checkbox"> Standard <span>$20.00</span></li>
                     <li><input type="checkbox"> Express <span>$30.00</span></li>
                 </ul>
-            </div>
+            </div> --}}
             <h4 class="grand-totall-title">Grand Total <span>${{ Cart::getTotal() }}</span></h4>
             <a href="{{route('checkout')}}" class="" style="background-color:#891e19;color:white;">Proceed to Checkout</a>
         </div>
@@ -77,5 +77,5 @@
 
 </div>
 @else
-<h5>Your Cart is currently empty!Try <a href="{{url('/')}}" style="color: #891e19">add new item</a></h5>
+<h5>Your Cart is currently empty! Try <a href="{{url('/')}}" style="color: #891e19">add new item</a></h5>
 @endif

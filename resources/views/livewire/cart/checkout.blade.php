@@ -71,7 +71,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-12">
+                            {{-- <div class="col-lg-12">
                                 <div class="billing-select mb-20">
                                     <label>Country <abbr class="required" title="required">*</abbr></label>
                                     <select>
@@ -83,7 +83,7 @@
                                         <option>Barbados</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-lg-12">
                                 <div class="billing-info mb-20">
                                     <label>Street Address <abbr class="required" title="required">*</abbr></label>
@@ -214,7 +214,7 @@
                             <div class="your-order-info-wrap">
                                 <div class="your-order-info">
                                     <ul>
-                                        <li>Total Product <span>{{ Cart::getTotalQuantity() }}</span></li>
+                                        <li>Total Product(s) <span>{{ Cart::getTotalQuantity() }}</span></li>
                                     </ul>
                                 </div>
                                 {{-- <div class="your-order-middle">

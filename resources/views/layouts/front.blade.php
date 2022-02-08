@@ -288,7 +288,7 @@
                                                         src="/guest/assets/images/banner/home-1.jpg" alt=""> </a>
                                             </div>
                                             <div class="btn-style-3">
-                                                <a class="animated btn-1-padding-1" href="">Shop
+                                                <a class="animated btn-1-padding-1" href="{{url('/')}}">Shop
                                                     now <i class="icon-arrow-right"></i></a>
                                             </div>
                                         </div>

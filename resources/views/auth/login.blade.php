@@ -5,7 +5,7 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-danger">
             <div class="card-header text-center">
-                <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
+                <a href="" class="h1"><b>Kins</b>International</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
@@ -41,16 +41,16 @@
                     @enderror
                     <div class="row">
                         <div class="col-8">
-                            <div class="icheck-primary">
+                            {{-- <div class="icheck-primary">
                                 <input type="checkbox" id="remember">
                                 <label for="remember">
                                     Remember Me
                                 </label>
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-block" style="background-color:#891e19;color:white">Sign In</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -59,11 +59,11 @@
 
                 <!-- /.social-auth-links -->
 
-                <p class="mb-1">
+                {{-- <p class="mb-1">
                     <a href="{{ route('password.request') }}">I forgot my password</a>
-                </p>
+                </p> --}}
                 <p class="mb-0">
-                    <a href="{{ url('register') }}" class="text-center">Register a new membership</a>
+                    <a href="{{ url('register') }}" class="text-center" style="color: #891e19">Don't Have an Account</a>
                 </p>
             </div>
             <!-- /.card-body -->
