@@ -179,7 +179,7 @@
                     <div class="row align-items-center">
                         <div class="col-5">
                             <div class="mobile-logo">
-                                <a href="{{ url('/') }}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
+                                <a href="{{ url('/') }}"><img src="/guest/assets/images/kins_international_market_logo.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-7">
@@ -270,27 +270,26 @@
         <div class="slider-area bg-gray-2">
             <div class="hero-slider-active-2 nav-style-1 nav-style-1-green">
                 <div class="single-hero-slider single-hero-slider-hm3 single-animation-wrap">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-4 ms-auto">
-                            </div>
-                            <div class="col-lg-8 col-md-12 col-12 ms-auto">
+
+                            <div class="col-lg-12 col-md-12 col-12">
                                 <div class="row align-items-center slider-animated-1">
-                                    <div class="col-lg-7 col-md-7 col-sm-7 col-12">
-                                        <div class="hero-slider-content-3 slider-animated-1">
+                                    <div class="col-12">
+                                        <div class="hero-slider-content-3 slider-animated-1" style="margin-right:-30px;">
                                             {{-- <h4 class="animated">New Arrivals</h4>
                                             <h1 class="animated">Basic thick knit <br>T-shirt</h1>
                                             <p class="animated">Men's basic coat with a high lapel collar and
                                                 side pockets with button fastening.</p> --}}
                                             {{-- <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
-                                            <div class="slider-tab-small-img nav animated">
+                                            <div class="slider-tab-small-img animated">
                                                 <a class="active" href="#tshirt-4" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/banner/home-1.jpg" alt=""> </a>
+                                                        src="/guest/assets/images/banner/main-bannerheader.jpg" alt="" class=""> </a>
                                             </div>
-                                            <div class="btn-style-3">
+                                            {{-- <div class="btn-style-3">
                                                 <a class="animated btn-1-padding-1" href="{{url('/')}}">Shop
                                                     now <i class="icon-arrow-right"></i></a>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                     {{-- <div class="col-lg-5 col-md-5 col-sm-5 col-12">
@@ -318,13 +317,12 @@
                     </div>
                 </div>
                 <div class="single-hero-slider single-hero-slider-hm3 single-animation-wrap">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-4 ms-auto">
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-8 ms-auto">
+
+                            <div class="col-lg-12 col-md-12 col-12 ms-auto">
                                 <div class="row align-items-center slider-animated-1">
-                                    <div class="col-lg-7 col-md-7 col-sm-7 col-12">
+                                    <div class="col-12">
                                         <div class="hero-slider-content-3">
                                             {{-- <h4 class="animated">New Arrivals</h4>
                                             <h1 class="animated">Basic thick knit <br>T-shirt</h1>
@@ -333,15 +331,15 @@
                                             <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
                                             <div class="slider-tab-small-img nav animated">
                                                 <a href="#tshirt-7" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/banner/home2.png"
+                                                        src="/guest/assets/images/banner/main-bannerheader.jpg"
                                                         alt=""> </a>
 
 
                                             </div>
-                                            <div class="btn-style-3">
+                                            {{-- <div class="btn-style-3">
                                                 <a class="animated btn-1-padding-1" href="">Shop
                                                     now <i class="icon-arrow-right"></i></a>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                     {{-- <div class="col-lg-5 col-md-5 col-sm-5 col-12">
@@ -425,107 +423,7 @@
         {{-- product --}}
         @yield('content')
         <x-news />
-        <footer class="footer-area bg-gray-4">
-            <div class="footer-top border-bottom-4 pb-55">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                            <div class="footer-widget mb-40">
-                                <h3 class="footer-title">Quick Shop</h3>
-                                <div class="footer-info-list info-list-50-parcent">
-                                    <ul>
-
-                                        <li><a href="{{ url('/category/beans&grains') }}">Beans and Grains</a></li>
-                                        <li><a href="{{ url('/category/soup-ingredients') }}">Soup Ingredients</a>
-                                        </li>
-                                        <li><a href="{{ url('/category/flour&swallow') }}">Flour and Swallow</a></li>
-                                        <li><a href="{{ url('/category/dried-vegetable') }}">Dried Vegetable</a></li>
-                                        <li><a href="{{ url('/category/spices&seasonings') }}">Spices and
-                                                Seasonings</a></li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                            <div class="footer-widget ml-70 mb-40">
-                                <h3 class="footer-title">useful links</h3>
-                                <div class="footer-info-list">
-                                    <ul>
-                                        <li><a href="">My Account</a></li>
-                                        <li><a href="">My Wishlish</a></li>
-                                        <li><a href="#">Term & Conditions</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Track Order</a></li>
-                                        <li><a href="">Shop</a></li>
-                                        <li><a href="">About Us</a></li>
-                                        <li><a href="#">Returns/Exchange</a></li>
-                                        <li><a href="#">FAQs</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                            <div class="footer-widget mb-40 ">
-                                <h3 class="footer-title">Contact Us</h3>
-                                <div class="contact-info-2">
-                                    <div class="single-contact-info-2">
-                                        <div class="contact-info-2-icon">
-                                            <i class="icon-call-end"></i>
-                                        </div>
-                                        <div class="contact-info-2-content">
-                                            <p>Got a question? Call us 24/7</p>
-                                            <h3>(365) 8635 56-24-02 </h3>
-                                        </div>
-                                    </div>
-                                    <div class="single-contact-info-2">
-                                        <div class="contact-info-2-icon">
-                                            <i class="icon-cursor icons"></i>
-                                        </div>
-                                        <div class="contact-info-2-content">
-                                            <p>268 Orchard St, Mahattan, 12005, CA, United State</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-contact-info-2">
-                                        <div class="contact-info-2-icon">
-                                            <i class="icon-envelope-open "></i>
-                                        </div>
-                                        <div class="contact-info-2-content">
-                                            <p>contact@norda.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="social-style-1 social-style-1-font-inc social-style-1-mrg-2">
-                                    <a href="#"><i class="icon-social-twitter"></i></a>
-                                    <a href="#"><i class="icon-social-facebook"></i></a>
-                                    <a href="#"><i class="icon-social-instagram"></i></a>
-                                    <a href="#"><i class="icon-social-youtube"></i></a>
-                                    <a href="#"><i class="icon-social-pinterest"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom pt-30 pb-30 ">
-                <div class="container">
-                    <div class="row flex-row-reverse">
-                        <div class="col-lg-6 col-md-6">
-                            {{-- <div class="payment-img payment-img-right">
-                                <a href="#"><img src="/guest/assets/images/Kins_International_Market_Logo_V1.png" class="w-100 h-100"></a>
-                            </div> --}}
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="copyright copyright-center">
-                                <p>Copyright © 2021 Kins International Market</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
+       <x-footer>
 
     </div>
 
