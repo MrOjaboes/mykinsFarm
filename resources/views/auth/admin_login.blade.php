@@ -3,10 +3,10 @@
 @section('content')
     <div class="login-box">
         <!-- /.login-logo -->
-        <div class="card card-outline card-success">
+        <div class="card card-outline card-danger">
 
             <div class="card-header text-center">
-                <a href="{{ url('/') }}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
+                <a href="{{ url('/') }}"><img src="/guest/assets/images/Kins_International_Market.png" class="w-100" style="height:100px" alt="logo"></a>
             </div>
             <div class="card-body">
                 <div>
