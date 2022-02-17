@@ -13,25 +13,23 @@
                                 </li>
                                 <li><a href="{{ url('/category/flour&swallow') }}">Flour and Swallow</a></li>
                                 <li><a href="{{ url('/category/dried-vegetable') }}">Dried Vegetable</a></li>
-                                <li><a href="{{ url('/category/spices&seasonings') }}">Spices and
-                                        Seasonings</a></li>
+                                <li><a href="{{ url('/category/spices&seasonings') }}">Spices and Seasonings</a></li>
 
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <div class="footer-widget ml-70 mb-40">
+                    <div class="footer-widget ml-70 mb-40" style="color:white;">
                         <h3 class="footer-title">useful links</h3>
                         <div class="footer-info-list">
                             <ul>
                                 <li><a href="">My Account</a></li>
-                                <li><a href="">My Wishlish</a></li>
-                                <li><a href="#">Term & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Track Order</a></li>
-                                <li><a href="">Shop</a></li>
-                                <li><a href="">About Us</a></li>
+                                <li><a href="">Term & Conditions</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Track Order</a></li>
+                                <li><a href="{{url('/')}}">Shop</a></li>
+                                <li><a href="{{url('about-us')}}">About Us</a></li>
                                 <li><a href="#">Returns/Exchange</a></li>
                                 <li><a href="#">FAQs</a></li>
                             </ul>
@@ -48,7 +46,7 @@
                                 </div>
                                 <div class="contact-info-2-content">
                                     <p>Got a question? Call us 24/7</p>
-                                    <h3>(365) 8635 56-24-02 </h3>
+                                    <h5>+1-301-200-8417 </h5>
                                 </div>
                             </div>
                             <div class="single-contact-info-2">
@@ -56,7 +54,7 @@
                                     <i class="icon-cursor icons"></i>
                                 </div>
                                 <div class="contact-info-2-content">
-                                    <p>268 Orchard St, Mahattan, 12005, CA, United State</p>
+                                    <p>30 N Gould St., Suite 23161, Sheridan, WY 82801</p>
                                 </div>
                             </div>
                             <div class="single-contact-info-2">
@@ -64,7 +62,7 @@
                                     <i class="icon-envelope-open "></i>
                                 </div>
                                 <div class="contact-info-2-content">
-                                    <p>contact@norda.com</p>
+                                    <p>mykinsfarm@gmail.com </p>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +88,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="copyright copyright-center">
-                        <p>Copyright © 2021 Kins International Market</p>
+                        <p>Copyright © 2022 Kins International Market</p>
                     </div>
                 </div>
             </div>

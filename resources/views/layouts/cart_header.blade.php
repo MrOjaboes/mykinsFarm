@@ -30,6 +30,49 @@
     <link rel="stylesheet" href="/guest/assets/css/plugins/jquery-ui.css">
     <link rel="stylesheet" href="/guest/assets/css/style.css">
 @livewireStyles
+<style>
+.about-page-title{
+    font-weight: 500;
+    font-size: 50px;
+    color: #000;
+}
+.about-text{
+    font-weight: 200;
+    font-size: 15px;
+    color: #666;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+.grand-totall h5 {
+    color:#891e19;
+}
+.footer-widget .footer-info-list ul li a {
+    color:white;
+    text-decoration:none;
+}
+.footer-widget .footer-info-list ul li a:hover{
+    color:white;
+}
+.footer-widget h3.footer-title,.footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-content p,h5{
+    color:white;
+}
+.footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-icon i {
+    color:white;
+}
+.hero-slider-content-3 .slider-tab-small-img {
+    margin: -10px -30px 0px;
+}
+@media only screen and (max-width: 767px){
+.single-hero-slider-hm3 {
+    padding: 0px 0 0;
+}
+.hero-slider-content-3 .slider-tab-small-img a img {
+    max-width: 100%;
+    height: 235px;
+}
+}
+</style>
 </head>
 
 <body>
@@ -62,10 +105,10 @@
                                     <div class="same-style-2 same-style-2-font-inc">
                                         @guest
                                         @if (Route::has('login'))
-                                        <a href="{{route('login')}}"><i class="icon-user"></i>Login</a>
+                                        <a href="{{route('login')}}"><i class="icon-user"></i><span style="font-size:15px;">Login</span></a> |
                                         @endif
                                         @if (Route::has('register'))
-                                        <a href="{{route('register')}}"><i class="icon-user"></i>Register</a>
+                                        <a href="{{route('register')}}"><span style="font-size:15px;">Register</span></a>
                                         @endif
                                         @else
                                         <li class="nav-item dropdown" style="list-style-type: none;">
@@ -112,7 +155,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3">
                                 <div class="logo">
-                                    <a href="{{url('/')}}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
+                                    <a href="{{url('/')}}"><img src="/guest/assets/images/kins_international_market_logo.png" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -143,7 +186,7 @@
                     <div class="row align-items-center">
                         <div class="col-5">
                             <div class="mobile-logo">
-                                <a href="{{url('/')}}"><img src="/guest/assets/images/logo1.png" alt="logo"></a>
+                                <a href="{{url('/')}}"><img src="/guest/assets/images/kins_international_market_logo.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-7">
@@ -215,9 +258,9 @@
 
                     <div class="mobile-contact-info mobile-header-padding-border-4">
                         <ul>
-                            <li><i class="icon-phone "></i> (+612) 2531 5600</li>
-                            <li><i class="icon-envelope-open "></i> norda@domain.com</li>
-                            <li><i class="icon-home"></i> PO Box 1622 Colins Street West Australia</li>
+                            <li><i class="icon-phone "></i> +1-301-200-8417</li>
+                            <li><i class="icon-envelope-open "></i> mykinsfarm@gmail.com </li>
+                            <li><i class="icon-home"></i> 30 N Gould St., Suite 23161, Sheridan, WY 82801</li>
                         </ul>
                     </div>
                     <div class="mobile-social-icon">
@@ -236,105 +279,7 @@
         {{-- product --}}
         @yield('content')
         <x-news />
-        <footer class="footer-area bg-gray-4">
-            <div class="footer-top border-bottom-4 pb-55">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                            <div class="footer-widget mb-40">
-                                <h3 class="footer-title">Quick Shop</h3>
-                                <div class="footer-info-list info-list-50-parcent">
-                                    <ul>
-
-                                        <li><a href="{{ url('/category/beans&grains') }}">Beans and Grains</a></li>
-                                        <li><a href="{{ url('/category/soup-ingredients') }}">Soup Ingredients</a>
-                                        </li>
-                                        <li><a href="{{ url('/category/flour&swallow') }}">Flour and Swallow</a></li>
-                                        <li><a href="{{ url('/category/dried-vegetable') }}">Dried Vegetable</a></li>
-                                        <li><a href="{{ url('/category/spices&seasonings') }}">Spices and
-                                                Seasonings</a></li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                            <div class="footer-widget ml-70 mb-40">
-                                <h3 class="footer-title">useful links</h3>
-                                <div class="footer-info-list">
-                                    <ul>
-                                        <li><a href="">My Account</a></li>
-                                        <li><a href="">My Wishlish</a></li>
-                                        <li><a href="#">Term & Conditions</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Track Order</a></li>
-                                        <li><a href="">Shop</a></li>
-                                        <li><a href="">About Us</a></li>
-                                        <li><a href="#">Returns/Exchange</a></li>
-                                        <li><a href="#">FAQs</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-                            <div class="footer-widget mb-40 ">
-                                <h3 class="footer-title">Contact Us</h3>
-                                <div class="contact-info-2">
-                                    <div class="single-contact-info-2">
-                                        <div class="contact-info-2-icon">
-                                            <i class="icon-call-end"></i>
-                                        </div>
-                                        <div class="contact-info-2-content">
-                                            <p>Got a question? Call us 24/7</p>
-                                            <h3>(365) 8635 56-24-02 </h3>
-                                        </div>
-                                    </div>
-                                    <div class="single-contact-info-2">
-                                        <div class="contact-info-2-icon">
-                                            <i class="icon-cursor icons"></i>
-                                        </div>
-                                        <div class="contact-info-2-content">
-                                            <p>268 Orchard St, Mahattan, 12005, CA, United State</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-contact-info-2">
-                                        <div class="contact-info-2-icon">
-                                            <i class="icon-envelope-open "></i>
-                                        </div>
-                                        <div class="contact-info-2-content">
-                                            <p>contact@norda.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="social-style-1 social-style-1-font-inc social-style-1-mrg-2">
-                                    <a href="#"><i class="icon-social-twitter"></i></a>
-                                    <a href="#"><i class="icon-social-facebook"></i></a>
-                                    <a href="#"><i class="icon-social-instagram"></i></a>
-                                    <a href="#"><i class="icon-social-youtube"></i></a>
-                                    <a href="#"><i class="icon-social-pinterest"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom pt-30 pb-30 ">
-                <div class="container">
-                    <div class="row flex-row-reverse">
-                        <div class="col-lg-6 col-md-6">
-                            {{-- <div class="payment-img payment-img-right">
-                                <a href="#"><img src="/guest/assets/images/Kins_International_Market_Logo_V1.png" class="w-100 h-100"></a>
-                            </div> --}}
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="copyright copyright-center">
-                                <p>Copyright © 2021 Kins International Market</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+       <x-footer />
 
     </div>
 

@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 //Product search
 
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'searchproduct'])->name('product.search');
-
+Route::get('/about-us', function () {
+    return view('about');
+});
 //Admin Login
 Route::get('/admin-login', function () {
     return view('auth.admin_login');

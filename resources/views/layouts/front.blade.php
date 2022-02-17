@@ -29,7 +29,36 @@
     <link rel="stylesheet" href="/guest/assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+<style>
+    .mb-30 {
+    margin-bottom: 0px;
+}
+.footer-widget .footer-info-list ul li a {
+    color:white;
+    text-decoration:none;
+}
+.footer-widget .footer-info-list ul li a:hover{
+    color:white;
+}
+.footer-widget h3.footer-title,.footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-content p,h5{
+    color:white;
+}
+.footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-icon i {
+    color:white;
+}
+.hero-slider-content-3 .slider-tab-small-img {
+    margin: -5px -30px 0px;
+}
+@media only screen and (max-width: 767px){
+.single-hero-slider-hm3 {
+    padding: 0px 0 0;
+}
+.hero-slider-content-3 .slider-tab-small-img a img {
+    max-width: 100%;
+    height: 235px;
+}
+}
+</style>
 </head>
 
 <body>
@@ -252,10 +281,10 @@
                     </div>
 
                     <div class="mobile-contact-info mobile-header-padding-border-4">
-                        <ul>
-                            <li><i class="icon-phone "></i> (+612) 2531 5600</li>
-                            <li><i class="icon-envelope-open "></i> norda@domain.com</li>
-                            <li><i class="icon-home"></i> PO Box 1622 Colins Street West Australia</li>
+                       <ul>
+                            <li><i class="icon-phone "></i> +1-301-200-8417</li>
+                            <li><i class="icon-envelope-open "></i> mykinsfarm@gmail.com </li>
+                            <li><i class="icon-home"></i> 30 N Gould St., Suite 23161, Sheridan, WY 82801</li>
                         </ul>
                     </div>
                     <div class="mobile-social-icon">
@@ -276,14 +305,14 @@
                             <div class="col-lg-12 col-md-12 col-12">
                                 <div class="row align-items-center slider-animated-1">
                                     <div class="col-12">
-                                        <div class="hero-slider-content-3 slider-animated-1" style="margin-right:-30px;">
+                                        <div class="hero-slider-content-3 slider-animated-1" style="">
                                             {{-- <h4 class="animated">New Arrivals</h4>
                                             <h1 class="animated">Basic thick knit <br>T-shirt</h1>
                                             <p class="animated">Men's basic coat with a high lapel collar and
                                                 side pockets with button fastening.</p> --}}
                                             {{-- <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
                                             <div class="slider-tab-small-img animated">
-                                                <a class="active" href="#tshirt-4" data-bs-toggle="tab"><img
+                                                <a class="active" href="{{url('/#shop2')}}" data-bs-toggle="tab"><img
                                                         src="/guest/assets/images/banner/main-bannerheader.jpg" alt="" class=""> </a>
                                             </div>
                                             {{-- <div class="btn-style-3">
@@ -323,14 +352,14 @@
                             <div class="col-lg-12 col-md-12 col-12 ms-auto">
                                 <div class="row align-items-center slider-animated-1">
                                     <div class="col-12">
-                                        <div class="hero-slider-content-3">
+                                        <div class="hero-slider-content-3" style="margin-right:-30px;">
                                             {{-- <h4 class="animated">New Arrivals</h4>
                                             <h1 class="animated">Basic thick knit <br>T-shirt</h1>
                                             <p class="animated">Men's basic coat with a high lapel collar and
                                                 side pockets with button fastening.</p>
                                             <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
                                             <div class="slider-tab-small-img nav animated">
-                                                <a href="#tshirt-7" data-bs-toggle="tab"><img
+                                                <a href="{{url('/#shop2')}}" data-bs-toggle="tab"><img
                                                         src="/guest/assets/images/banner/main-bannerheader.jpg"
                                                         alt=""> </a>
 
@@ -378,7 +407,7 @@
                             </div>
                             <div class="service-content-2">
                                 <h3>Free Shipping</h3>
-                                <p>Oders over $99</p>
+                                <p>All amounts, no minimum!</p>
                             </div>
                         </div>
                     </div>
@@ -388,8 +417,8 @@
                                 <i class="icon-refresh "></i>
                             </div>
                             <div class="service-content-2">
-                                <h3>90 Days Return</h3>
-                                <p>For any problems</p>
+                                <h3>30 Days Return</h3>
+                                <p>Returns on defective items only and packaging was unopened </p>
                             </div>
                         </div>
                     </div>
@@ -423,7 +452,7 @@
         {{-- product --}}
         @yield('content')
         <x-news />
-       <x-footer>
+       <x-footer />
 
     </div>
 
