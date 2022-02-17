@@ -407,7 +407,7 @@
                             </div>
                             <div class="service-content-2">
                                 <h3>Free Shipping</h3>
-                                <p>All amounts, no minimum!</p>
+                                <p>All amounts, No minimum!</p>
                             </div>
                         </div>
                     </div>

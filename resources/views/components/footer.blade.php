@@ -24,7 +24,7 @@
                         <h3 class="footer-title">useful links</h3>
                         <div class="footer-info-list">
                             <ul>
-                                <li><a href="">My Account</a></li>
+                                <li><a href="{{route('login')}}">My Account</a></li>
                                 <li><a href="">Term & Conditions</a></li>
                                 <li><a href="">Privacy Policy</a></li>
                                 <li><a href="">Track Order</a></li>

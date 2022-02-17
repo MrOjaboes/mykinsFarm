@@ -5,7 +5,7 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-danger">
             <div class="card-header text-center">
-                <a href="" class="h1"><b>Kins</b>International</a>
+                <a href="{{url('/')}}" class="h1"><b>Kins</b> International</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start your session</p>

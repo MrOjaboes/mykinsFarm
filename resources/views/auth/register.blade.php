@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="register-box">
-    <div class="card card-outline card-primary">
+    <div class="card card-outline card-danger">
       <div class="card-header text-center">
-        <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
+        <a href="{{url('/')}}" class="h1"><b>Kins</b> International</a>
       </div>
       <div class="card-body">
         <p class="login-box-msg">Register a new membership</p>
@@ -46,23 +46,23 @@
           </div>
           <div class="row">
             <div class="col-8">
-              <div class="icheck-primary">
+              {{-- <div class="icheck-primary">
                 <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                 <label for="agreeTerms">
                  I agree to the <a href="#">terms</a>
                 </label>
-              </div>
+              </div> --}}
             </div>
             <!-- /.col -->
             <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Register</button>
+              <button type="submit" class="btn btn-block" style="background-color:#891e19;color:white">Register</button>
             </div>
             <!-- /.col -->
           </div>
         </form>
 
 
-        <a href="{{url('login')}}" class="text-center">I already have a membership</a>
+        <a href="{{url('login')}}" class="text-center" style="color:#891e19;">I already have an account</a>
       </div>
       <!-- /.form-box -->
     </div><!-- /.card -->
