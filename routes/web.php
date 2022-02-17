@@ -67,6 +67,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('Admin');
 Route::get('/admin/orders', [App\Http\Controllers\AdminController::class, 'orders'])->name('admin.orders')->middleware('Admin');
+Route::get('/admin/order/{order}', [App\Http\Controllers\AdminController::class, 'editOrder'])->name('edit.order')->middleware('Admin');
+Route::post('/admin/order/{order}', [App\Http\Controllers\AdminController::class, 'payment'])->name('update.payment')->middleware('Admin');
 Route::get('/admin/profile', [App\Http\Controllers\AdminController::class, 'profile'])->name('admin.profile')->middleware('Admin');
 Route::post('/admin/profile', [App\Http\Controllers\ProfileController::class, 'adminProfile'])->name('admin.profile')->middleware('Admin');
 Route::post('/admin/profile', [App\Http\Controllers\ProfileController::class, 'update_password'])->name('update.password')->middleware('Admin');

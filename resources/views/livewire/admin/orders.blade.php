@@ -20,8 +20,9 @@
             <td>{{$order->item_count}}</td>
             <td>{{$order->status}}</td>
             <td>${{$order->grand_total}}</td>
-            <td>{{$order->created_at}}</td>
+            <td>{{\Carbon\Carbon::parse($order->created_at)->format('D m, M Y')}}</td>
             <td>{{$order->payment_method}}</td>
+            <td><a href="{{route('edit.order',$order->id)}}" class="btn btn-sm" style="background-color: #891e19;color: #fff;">Details</a></td>
         </tr>
            @endforeach
         </tbody>

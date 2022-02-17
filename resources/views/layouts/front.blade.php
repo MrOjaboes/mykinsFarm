@@ -27,38 +27,52 @@
     <link rel="stylesheet" href="/guest/assets/css/plugins/magnific-popup.css">
     <link rel="stylesheet" href="/guest/assets/css/plugins/jquery-ui.css">
     <link rel="stylesheet" href="/guest/assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<style>
-    .mb-30 {
-    margin-bottom: 0px;
-}
-.footer-widget .footer-info-list ul li a {
-    color:white;
-    text-decoration:none;
-}
-.footer-widget .footer-info-list ul li a:hover{
-    color:white;
-}
-.footer-widget h3.footer-title,.footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-content p,h5{
-    color:white;
-}
-.footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-icon i {
-    color:white;
-}
-.hero-slider-content-3 .slider-tab-small-img {
-    margin: -5px -30px 0px;
-}
-@media only screen and (max-width: 767px){
-.single-hero-slider-hm3 {
-    padding: 0px 0 0;
-}
-.hero-slider-content-3 .slider-tab-small-img a img {
-    max-width: 100%;
-    height: 235px;
-}
-}
-</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"
+        integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .mb-30 {
+            margin-bottom: 0px;
+        }
+
+        .footer-widget .footer-info-list ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-widget .footer-info-list ul li a:hover {
+            color: white;
+        }
+
+        .footer-widget h3.footer-title,
+        .footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-content p,
+        h5 {
+            color: white;
+        }
+
+        .footer-widget .contact-info-2 .single-contact-info-2 .contact-info-2-icon i {
+            color: white;
+        }
+
+        .hero-slider-content-3 .slider-tab-small-img {
+            margin: -5px -30px 0px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .single-hero-slider-hm3 {
+                padding: 0px 0 0;
+            }
+
+            .hero-slider-content-3 .slider-tab-small-img a img {
+                max-width: 100%;
+                height: 235px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -71,7 +85,8 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="{{ url('/') }}"><img src="/guest/assets/images/kins_international_market_logo.png"
+                                    <a href="{{ url('/') }}"><img
+                                            src="/guest/assets/images/kins_international_market_logo.png"
                                             alt="logo"></a>
                                 </div>
                             </div>
@@ -79,7 +94,7 @@
                                 <div class="categori-search-wrap">
                                     <div class="search-wrap-3">
 
-                                            <input placeholder="Search Products..." type="text" id="product_name" name="">
+                                        <input placeholder="Search Products..." type="text" id="product_name" name="">
 
 
                                         <ul>
@@ -114,7 +129,7 @@
                                                 <div class="dropdown-menu dropdown-menu-right"
                                                     aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                     document.getElementById('logout-form').submit();">
+                                                                         document.getElementById('logout-form').submit();">
                                                         <span style="font-size:15px;">Log out</span>
                                                     </a>
                                                     <hr>
@@ -208,7 +223,8 @@
                     <div class="row align-items-center">
                         <div class="col-5">
                             <div class="mobile-logo">
-                                <a href="{{ url('/') }}"><img src="/guest/assets/images/kins_international_market_logo.png" alt="logo"></a>
+                                <a href="{{ url('/') }}"><img
+                                        src="/guest/assets/images/kins_international_market_logo.png" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-7">
@@ -242,7 +258,7 @@
                 <a class="sidebar-close"><i class="icon_close"></i></a>
                 <div class="mobile-header-content-area">
                     <div class="header-offer-wrap-2 mrg-none mobile-header-padding-border-4">
-                        <p><span>FREE SHIPPING</span> world wide for all orders over $199</p>
+                        <p><span>FREE SHIPPING</span> All amounts, No minimum!</p>
                     </div>
                     <div class="mobile-search mobile-header-padding-border-1">
                         <form class="search-form" action="#">
@@ -281,7 +297,7 @@
                     </div>
 
                     <div class="mobile-contact-info mobile-header-padding-border-4">
-                       <ul>
+                        <ul>
                             <li><i class="icon-phone "></i> +1-301-200-8417</li>
                             <li><i class="icon-envelope-open "></i> mykinsfarm@gmail.com </li>
                             <li><i class="icon-home"></i> 30 N Gould St., Suite 23161, Sheridan, WY 82801</li>
@@ -312,8 +328,10 @@
                                                 side pockets with button fastening.</p> --}}
                                             {{-- <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
                                             <div class="slider-tab-small-img animated">
-                                                <a class="active" href="{{url('/#shop2')}}" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/banner/main-bannerheader.jpg" alt="" class=""> </a>
+                                                <a class="active" href="{{ url('/#shop2') }}"
+                                                    data-bs-toggle="tab"><img
+                                                        src="/guest/assets/images/banner/main-bannerheader.jpg" alt=""
+                                                        class=""> </a>
                                             </div>
                                             {{-- <div class="btn-style-3">
                                                 <a class="animated btn-1-padding-1" href="{{url('/')}}">Shop
@@ -359,9 +377,9 @@
                                                 side pockets with button fastening.</p>
                                             <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
                                             <div class="slider-tab-small-img nav animated">
-                                                <a href="{{url('/#shop2')}}" data-bs-toggle="tab"><img
-                                                        src="/guest/assets/images/banner/main-bannerheader.jpg"
-                                                        alt=""> </a>
+                                                <a href="{{ url('/#shop2') }}" data-bs-toggle="tab"><img
+                                                        src="/guest/assets/images/banner/main-bannerheader.jpg" alt="">
+                                                </a>
 
 
                                             </div>
@@ -452,27 +470,31 @@
         {{-- product --}}
         @yield('content')
         <x-news />
-       <x-footer />
+        <x-footer />
 
     </div>
 
     <!-- All JS is here
 ============================================ -->
-<script>
-   var path ="{{url('/search')}}";
-$('#product_name').typeaheead({
-    source: function(query,process){
-        return $.get(path, {query:query}, function(data){
-            return process(data);
+    <script>
+        var path = "{{ url('/search') }}";
+        $('#product_name').typeaheead({
+            source: function(query, process) {
+                return $.get(path, {
+                    query: query
+                }, function(data) {
+                    return process(data);
+                });
+            }
         });
-    }
-});
-</script>
+    </script>
     <script src="/guest/assets/js/vendor/modernizr-3.11.7.min.js"></script>
     <script src="/guest/assets/js/vendor/jquery-v3.6.0.min.js"></script>
     <script src="/guest/assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
     <script src="/guest/assets/js/vendor/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js" integrity="sha512-P2Z/b+j031xZuS/nr8Re8dMwx6pNIexgJ7YqcFWKIqCdbjynk4kuX/GrqpQWEcI94PRCyfbUQrjRcWMi7btb0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"
+        integrity="sha512-P2Z/b+j031xZuS/nr8Re8dMwx6pNIexgJ7YqcFWKIqCdbjynk4kuX/GrqpQWEcI94PRCyfbUQrjRcWMi7btb0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/guest/assets/js/vendor/bootstrap.min.js"></script>
     <script src="/guest/assets/js/plugins/slick.js"></script>
     <script src="/guest/assets/js/plugins/jquery.syotimer.min.js"></script>

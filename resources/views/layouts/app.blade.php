@@ -28,13 +28,24 @@
   <link rel="stylesheet" href="/AdminUi/plugins/summernote/summernote-bs4.min.css">
 
   @livewireStyles
+  <style>
+
+.nav-pills .nav-link.active{
+    background-color: #891e19;
+    color: #fff;
+}
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active{
+    background-color: #c9b8b7;
+    color: #000;
+}
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="/guest/assets/images/logo1.png" alt="Logo" height="60" width="60">
+    <img class="animation__shake" src="/guest/assets/images/kins_international_market_logo.png" alt="Logo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
