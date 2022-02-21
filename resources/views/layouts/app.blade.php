@@ -27,7 +27,6 @@
   <!-- summernote -->
   <link rel="stylesheet" href="/AdminUi/plugins/summernote/summernote-bs4.min.css">
 
-  @livewireStyles
   <style>
 
 .nav-pills .nav-link.active{
@@ -39,6 +38,8 @@
     color: #000;
 }
   </style>
+
+@livewireStyles
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
