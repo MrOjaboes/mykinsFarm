@@ -25,7 +25,6 @@
  <!-- /.row -->
        <livewire:product.index />
 
-
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

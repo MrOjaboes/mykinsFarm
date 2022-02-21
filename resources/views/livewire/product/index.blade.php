@@ -54,7 +54,7 @@
 
             <!-- /.card-body -->
           </div>
-          ffff
+          <div class="text-right">{{ $products->links() }}</div>
           <!-- /.card -->
         </div>
       </div>
