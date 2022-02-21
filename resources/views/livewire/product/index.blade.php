@@ -17,7 +17,7 @@
             <div class="card-header">
               <h3 class="card-title"><a href="{{route('add-product')}}" class="btn btn-outline-success">Add Product</a></h3>
               <div class="card-tools">
-                 
+                <x-search />
               </div>
             </div>
             <!-- /.card-header -->
@@ -37,7 +37,7 @@
                  <tr>
                     <td>{{$product->name}}</td>
                     <td>{{$product->created_at}}</td>
-                    <td># {{$product->price}}</td>
+                    <td>$ {{$product->price}}</td>
                     <td><img id="img" src="{{ asset('/storage/products/' .$product->photo) }}"
                         width="100px" class="img-circle" alt="">
                 </td>

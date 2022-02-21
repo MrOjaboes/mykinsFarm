@@ -31,7 +31,6 @@
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$categories}}</h3>
-
                 <p>Total Categories</p>
               </div>
               <div class="icon">
@@ -46,7 +45,6 @@
             <div class="small-box bg-success">
               <div class="inner">
                 <h3>{{$products}}</h3>
-
                 <p>Total Products</p>
               </div>
               <div class="icon">
@@ -61,7 +59,6 @@
             <div class="small-box bg-warning">
               <div class="inner">
                 <h3>{{$users}}</h3>
-
                 <p>User Registrations</p>
               </div>
               <div class="icon">
@@ -76,7 +73,6 @@
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>{{$orders}}</h3>
-
                 <p>Total Orders</p>
               </div>
               <div class="icon">
