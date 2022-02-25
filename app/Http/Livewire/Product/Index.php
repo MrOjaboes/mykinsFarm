@@ -13,11 +13,12 @@ class Index extends Component
     public $searchTerm = null;
     public function render()
     {
+
         $products = Product::query()
         ->where('name','like','%'.$this->searchTerm.'%')
         ->orWhere('price','like','%'.$this->searchTerm.'%')
         ->latest()->paginate(10);
-        $products = Product::orderBy('created_at','DESC')->get();
+       // $products = Product::orderBy('created_at','DESC')->get();
         return view('livewire.product.index',compact('products'));
     }
     public function delete($id)

@@ -76,6 +76,7 @@
 <!-- ./wrapper -->
 
 @livewireScripts
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 <!-- jQuery -->
 <script src="/AdminUi/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->

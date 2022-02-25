@@ -280,6 +280,7 @@
         @yield('content')
         <x-news />
        <x-footer />
+       <x-chat />
 
     </div>
 

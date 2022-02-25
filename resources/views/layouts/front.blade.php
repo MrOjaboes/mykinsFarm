@@ -34,6 +34,21 @@
         integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
+        .feedback {
+  background-color : transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+}
+
+#mybutton {
+  position: fixed;
+  bottom:255px;
+  right: 90px;
+  width:50px;
+  height:50px;
+}
         .mb-30 {
             margin-bottom: 0px;
         }
@@ -61,6 +76,15 @@
             margin: -5px -30px 0px;
         }
 
+        @media (min-width: 320px) and (max-width: 480px) {
+            #mybutton {
+            position: fixed;
+            bottom: 202px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+                   }
+            }
         @media only screen and (max-width: 767px) {
             .single-hero-slider-hm3 {
                 padding: 0px 0 0;
@@ -128,8 +152,9 @@
 
                                                 <div class="dropdown-menu dropdown-menu-right"
                                                     aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                         document.getElementById('logout-form').submit();">
+                                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                                        onclick="event.preventDefault();
+                                                                             document.getElementById('logout-form').submit();">
                                                         <span style="font-size:15px;">Log out</span>
                                                     </a>
                                                     <hr>
@@ -471,6 +496,7 @@
         @yield('content')
         <x-news />
         <x-footer />
+        <x-chat />
 
     </div>
 
