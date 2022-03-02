@@ -75,7 +75,17 @@
         .hero-slider-content-3 .slider-tab-small-img {
             margin: -5px -30px 0px;
         }
+        .card-img, .card-img-bottom, .card-img-top {
+            width: 50%;
+            padding: 5px;
+        }
+        .card-img, .card-img-bottom, .card-img-top img{
+            width: 100%;
 
+        }
+        .card{
+            text-align: center;
+        }
         @media (min-width: 320px) and (max-width: 480px) {
             #mybutton {
             position: fixed;
@@ -84,6 +94,16 @@
             width: 50px;
             height: 50px;
                    }
+                   .grid{
+                       display: grid;
+                       grid-template-columns: 1fr 1fr;
+                       grid-gap: 10px;
+                   }
+                   .card-img, .card-img-bottom, .card-img-top {
+                    width: 80%;
+                    padding: 0px;
+                    margin: 20px;
+                }
             }
         @media only screen and (max-width: 767px) {
             .single-hero-slider-hm3 {

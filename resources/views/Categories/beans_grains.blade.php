@@ -9,60 +9,33 @@
             </div>
 
         </div>
-        <div class="tab-content jump">
-            <div id="product-6" class="tab-pane active">
-                <div class="product-slider-active-3 nav-style-3">
+        <div class="row grid">
                     @foreach ($products as $product)
-                    <div class="product-plr-1">
-                        <div class="single-product-wrap">
-                            <div class="product-img product-img-zoom mb-15">
-                                <a href="{{route('product.details',$product->id)}}">
-                                    <img src="{{ asset('/storage/products/' . $product->photo) }}" alt="">
-                                </a>
-
+                    <div class="col-md-3">
+                        <div class="card" style=" ">
+                            <div>
+                                <a href="{{ route('product.details', $product->id) }}"><img
+                                        src="{{ asset('/storage/products/' . $product->photo) }}"
+                                        class="card-img-top" alt=""></a>
                             </div>
-                            <div class="product-content-wrap-3">
-                                <div class="product-content-categories">
-                                    <a href="">{{$product->category->title}}</a>
-                                </div>
-                                <h3><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h3>
-                                <div class="product-rating-wrap-2">
-                                    <div class="product-rating-4">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star gray"></i>
-                                    </div>
-                                    <span>(4)</span>
-                                </div>
-                                <div class="product-price-4">
-                                    <span class="new-price">${{$product->price}} </span>
-
-                                </div>
-                            </div>
-                            <div class="product-content-wrap-3 product-content-position-2">
-                                <div class="product-content-categories">
-                                    <a href="{{route('product.details',$product->id)}}">{{$product->category->title}}</a>
-                                </div>
-                                <h3><a href="{{route('product.details',$product->id)}}">{{$product->name}}</a></h3>
-
-                                <div class="product-price-4">
-                                    <span class="new-price">${{$product->price}} </span>
-
-                                </div>
-                                <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark"><a
+                                        href="{{ route('product.details', $product->id) }}"><b>{{ $product->name }}</b></a>
+                                </h5>
+                                <h5 class="card-text text-success"><b>${{ $product->price }}</b> </h5>
+                                <form action="{{ route('cart.store') }}" method="POST"
+                                    enctype="multipart/form-data">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $product->id }}">
                                     <input type="hidden" name="name" value="{{ $product->name }}">
                                     <input type="hidden" name="price" value="{{ $product->price }}">
                                     <input type="hidden" name="photo" value="{{ $product->photo }}">
                                     <input type="hidden" name="quantity" value="1">
-                                    <div class="pro-add-to-cart-2">
-                                        <button title="Add to Cart">Add To Cart</button>
+                                    <div class="product-action-3">
+                                        <input type="submit" class="btn btn-success" title="Add To Cart"
+                                            value="Add To Cart" />
                                     </div>
                                 </form>
-
 
                             </div>
                         </div>
