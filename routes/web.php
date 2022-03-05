@@ -41,12 +41,14 @@ Route::get('/category/flour&swallow', function () {
 });
 
 Route::get('/product/details/{product}', [App\Http\Controllers\ProductController::class, 'product_details'])->name('product.details');
-Route::get('/', function () {
-    return view('guest',['products'=> Product::all()]);
-});
+// Route::get('/', function () {
+//     return view('guest',['products'=> Product::all()]);
+// });
 Route::get('/guest', function () {
     return view('guest');
 });
+Route::get('/', [App\Http\Controllers\GuestController::class, 'index']);
+
 Route::post('/cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
 Route::post('/update-cart', [App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
 Route::post('/remove', [App\Http\Controllers\CartController::class, 'removeCart'])->name('cart.remove');
