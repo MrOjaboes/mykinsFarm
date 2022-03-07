@@ -27,10 +27,15 @@
                                                     class="card-img-top" alt=""></a>
                                         </div>
                                         <div class="card-body">
-                                            <h5 class="card-title text-dark"><a
-                                                    href="{{ route('product.details', $product->id) }}"><b>{{ $product->name }}</b></a>
+
+                                            <h5 class="card-title text-dark">
+                                                <span>Qty : {{$product->quantity}}}</span>
+                                                <a href="{{ route('product.details', $product->id) }}"><b>{{ $product->name }}</b></a>
                                             </h5>
-                                            <h5 class="card-text text-success"><b>${{ $product->price }}</b> </h5>
+                                            <div style="display:flex;flex-direction:row;justify-content:space-evenly;">
+                                                <h5 class="card-text text-success"><b>#{{ $product->price }}</b> </h5>
+                                                <h5 class="card-text text-success"><b>${{ $product->price }}</b> </h5>
+                                            </div>
                                             <form action="{{ route('cart.store') }}" method="POST"
                                                 enctype="multipart/form-data">
                                                 @csrf
@@ -47,9 +52,6 @@
 
                                         </div>
                                     </div>
-
-
-
                                 </div>
                             @endif
                         @endforeach
@@ -260,8 +262,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div class="banner-area pt-0">
         <div class="container">
