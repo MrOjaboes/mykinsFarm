@@ -47,6 +47,16 @@
                                             name="price">
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputPassword1">Naira Eqv.</label>
+                                        <input type="number" class="form-control" value="{{$product->naira_price}}"
+                                            name="naira_price">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Product Quantity</label>
+                                        <input type="text" class="form-control" value="{{$product->quantity}}"
+                                            name="quantity">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputPassword1">Product Caption</label>
                                         <div class="custom-file">
                                             <input type="file" class="form-control" name="photo">

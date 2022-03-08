@@ -46,10 +46,11 @@ public function product_details(Product $product)
             $photo = $request->file('photo');
             $fileName = $photo->getClientOriginalName();
             $request->photo->storeAs('Products',$fileName,'public');
-
             $product->update([
                 'name' => $request->name,
                 'price' => $request->price,
+                'naira_price' => $request->naira_price,
+                'quantity' => $request->quantity,
                 'photo' => $fileName,
                 'description' => $request->description,
                 'category_id' => $request->category_id,
@@ -58,6 +59,8 @@ public function product_details(Product $product)
             $product->update([
                 'name' => $request->name,
                 'price' => $request->price,
+                'naira_price' => $request->naira_price,
+                'quantity' => $request->quantity,
                 'description' => $request->description,
                 'category_id' => $request->category_id,
             ]);

@@ -27,9 +27,8 @@
                                                     class="card-img-top" alt=""></a>
                                         </div>
                                         <div class="card-body">
-
                                             <h5 class="card-title text-dark">
-                                                <span>Qty : {{$product->quantity}}}</span>
+                                                <span><b>Qty : {{$product->quantity}}12.4kg</b></span>
                                                 <a href="{{ route('product.details', $product->id) }}"><b>{{ $product->name }}</b></a>
                                             </h5>
                                             <div style="display:flex;flex-direction:row;justify-content:space-evenly;">

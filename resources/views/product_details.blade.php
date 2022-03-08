@@ -1,13 +1,11 @@
-@extends('layouts.front')
+@extends('layouts.details')
 @section('content')
-
-
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 col-md-6 col-12 col-sm-12">
+                    <div class="col-lg-5">
                         <div class="tab-content quickview-big-img">
                             <div id="pro-1" class="tab-pane fade show active">
-                                <img src="{{ asset('/storage/products/' . $product->photo) }}" alt="">
+                                <img src="{{ asset('/storage/products/' . $product->photo) }}" class="img-thumbnail" alt="">
                             </div>
                             <div id="pro-2" class="tab-pane fade">
                                 <img src="{{ asset('/storage/products/' . $product->photo) }}" alt="">
@@ -28,7 +26,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-6 col-12 col-sm-12">
+                    <div class="col-lg-7">
                         <div class="product-details-content quickview-content">
                             <h2>{{$product->name}}</h2>
                             <div class="product-ratting-review-wrap">
@@ -69,22 +67,23 @@
                             </div>
                             <div class="pro-details-action-wrap">
                                 <div class="pro-details-add-to-cart pb-3">
-                                    <a title="home" style="background-color:#47A413;" href="{{url('/')}}">Continue Shopping </a>
+                                    <a title="home" style="background-color:#891e19;color:white;" href="{{url('/')}}">Continue Shopping </a>
                                 </div>
-                                <div class="pro-details-add-to-cart pb-3">
-                                    <a title="Add to Cart" style="background-color:#47A413;" href="#">Add To Cart </a>
-                                </div>
-                                {{-- <div class="pro-details-action">
-                                    <a title="Add to Wishlist" href="#"><i class="icon-heart"></i></a>
-                                    <a title="Add to Compare" href="#"><i class="icon-refresh"></i></a>
-                                    <a class="social" title="Social" href="#"><i class="icon-share"></i></a>
-                                    <div class="product-dec-social">
-                                        <a class="facebook" title="Facebook" href="#"><i class="icon-social-facebook"></i></a>
-                                        <a class="twitter" title="Twitter" href="#"><i class="icon-social-twitter"></i></a>
-                                        <a class="instagram" title="Instagram" href="#"><i class="icon-social-instagram"></i></a>
-                                        <a class="pinterest" title="Pinterest" href="#"><i class="icon-social-pinterest"></i></a>
-                                    </div>
-                                </div> --}}
+                                <form action="{{ route('cart.store') }}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="hidden" name="id" value="{{ $product->id }}">
+                                                <input type="hidden" name="name" value="{{ $product->name }}">
+                                                <input type="hidden" name="price" value="{{ $product->price }}">
+                                                <input type="hidden" name="photo" value="{{ $product->photo }}">
+                                                <input type="hidden" name="quantity" value="1">
+                                                <div class="pro-details-add-to-cart pb-3">
+                                                    <input type="submit" class="btn" title="Add To Cart" style="background-color:#891e19;color:white;"
+                                                        value="Add To Cart" />
+                                                </div>
+                                            </form>
+
+
                             </div>
                         </div>
                     </div>

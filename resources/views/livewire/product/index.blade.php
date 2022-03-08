@@ -28,7 +28,7 @@
                      <th>Title</th>
                     <th>Date Added</th>
                     <th>Price</th>
-                    <th>Caption</th>
+                    <th>Qty</th>
                     <th>Category</th>
                   </tr>
                 </thead>
@@ -37,9 +37,8 @@
                  <tr>
                     <td>{{$product->name}}</td>
                     <td>{{$product->created_at}}</td>
-                    <td>$ {{$product->price}}</td>
-                    <td><img id="img" src="{{ asset('/storage/products/' .$product->photo) }}"
-                        width="100px" class="img-circle" alt="">
+                    <td>${{$product->price}}</td>
+                    <td>{{$product->quantity}}
                 </td>
                     <td>{{$product->category->title}}</td>
                 <td><a href="{{route('product-details',$product->id)}}" class="btn btn-outline-info">Details</a>

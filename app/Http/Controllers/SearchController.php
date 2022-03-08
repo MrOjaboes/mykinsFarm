@@ -9,12 +9,9 @@ class SearchController extends Controller
 {
     public function searchproduct(Request $request)
     {
-        $data = request()->all();
-        $query = $data['query'];
+          $query = $request->searchTerm;
        //dd($request->term);
-        $prod = Product::select('name')
-        ->where('name','like', '%'.$query.'%')
-         ->get();
-         return response()->json($prod);
+        $products = Product::where('name','like', '%'.$query.'%')->get();
+         return view('search',compact('products'));
     }
 }

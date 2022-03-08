@@ -137,6 +137,7 @@
                             <div class="col-xl-7 col-lg-7">
                                 <x-product-search />
 
+
                             </div>
                             {{-- Cart environment --}}
                             <div class="col-xl-3 col-lg-3">
@@ -361,10 +362,7 @@
                                                         src="/guest/assets/images/banner/main-bannerheader.jpg" alt=""
                                                         class=""> </a>
                                             </div>
-                                            {{-- <div class="btn-style-3">
-                                                <a class="animated btn-1-padding-1" href="{{url('/')}}">Shop
-                                                    now <i class="icon-arrow-right"></i></a>
-                                            </div> --}}
+
                                         </div>
                                     </div>
 
@@ -381,11 +379,7 @@
                                 <div class="row align-items-center slider-animated-1">
                                     <div class="col-12">
                                         <div class="hero-slider-content-3" style="margin-right:-30px;">
-                                            {{-- <h4 class="animated">New Arrivals</h4>
-                                            <h1 class="animated">Basic thick knit <br>T-shirt</h1>
-                                            <p class="animated">Men's basic coat with a high lapel collar and
-                                                side pockets with button fastening.</p>
-                                            <h5 class="animated">3 Colors: <span>Grey</span></h5> --}}
+
                                             <div class="slider-tab-small-img nav animated">
                                                 <a href="{{ url('/#shop2') }}" data-bs-toggle="tab"><img
                                                         src="/guest/assets/images/banner/main-bannerheader.jpg" alt="">
@@ -393,31 +387,10 @@
 
 
                                             </div>
-                                            {{-- <div class="btn-style-3">
-                                                <a class="animated btn-1-padding-1" href="">Shop
-                                                    now <i class="icon-arrow-right"></i></a>
-                                            </div> --}}
+
                                         </div>
                                     </div>
-                                    {{-- <div class="col-lg-5 col-md-5 col-sm-5 col-12">
-                                        <div class="tab-content slider-tab-big-img-wrap jump animated">
-                                            <div id="tshirt-7" class="tab-pane">
-                                                <div class="slider-tab-big-img slider-tab-big-img-mrg-1">
-                                                    <img src="/guest/assets/images/slider/hm-3-slider-1.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div id="tshirt-8" class="tab-pane active">
-                                                <div class="slider-tab-big-img slider-tab-big-img-mrg-2">
-                                                    <img src="/guest/assets/images/slider/hm-3-slider-2.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div id="tshirt-9" class="tab-pane">
-                                                <div class="slider-tab-big-img slider-tab-big-img-mrg-3">
-                                                    <img src="/guest/assets/images/slider/hm-3-slider-3.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> --}}
+
                                 </div>
                             </div>
                         </div>
@@ -425,8 +398,6 @@
                 </div>
             </div>
         </div>
-        <x-service />
-
 
         {{-- product --}}
         @yield('content')
