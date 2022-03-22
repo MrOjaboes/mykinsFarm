@@ -40,8 +40,10 @@ class orderController extends Controller
         $order->item_count = \Cart::getTotalQuantity();
         if($request->payment_method == "Cash On Delivery"){
             $order->payment_method = "Cash On Delivery";
-          }elseif($request->payment_method == "Paypal"){
-            $order->payment_method = "Paypal";
+          }elseif($request->payment_method == "Authorize"){
+            $order->payment_method = "Authorize";
+
+           // $order->payment_method = "Paypal";
           }
         $order->save();
         //save order items
@@ -50,7 +52,7 @@ class orderController extends Controller
      $order->items()->attach($item->id,['price'=> $item->price,'quantity'=>$item->quantity]);
         }
         //Payment Method
-
+        return redirect()->route('payment');
         //clear cart
         \Cart::clear();
      //send mail to customer

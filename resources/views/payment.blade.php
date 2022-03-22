@@ -1,15 +1,43 @@
 @extends('layouts.auth')
 @section('content')
-<form id="paymentForm" method="post" action="{{ url('charge') }}">
-        {{ csrf_field() }}
-        <p><input type="text" name="amount" placeholder="Enter Amount" /></p>
-        <p><input type="text" name="cc_number" placeholder="Card Number" /></p>
-        <p><input type="text" name="expiry_month" placeholder="Month" /></p>
-        <p><input type="text" name="expiry_year" placeholder="Year" /></p>
-        <p><input type="text" name="cvv" placeholder="CVV" /></p>
-        <input type="submit" name="submit" value="Submit" />
-    </form>
-</form>
+ <div class="container px-5 py-5">
+
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                       <form id="paymentForm" method="post" action="{{ url('charge') }}">
+                           {{ csrf_field() }}
+                           <div class="form-group">
+                               <input type="hidden"  value="{{ Cart::getTotal() }}" name="amount" />
+                            </div>
+                           <div class="form-group">
+                               <input type="text" class="form-control" name="cc_number" class="form-control" placeholder="Card Number" />
+                            </div>
+                           <div class="form-group">
+                               <input type="text" name="expiry_month" class="form-control" placeholder="Month" />
+                            </div>
+                           <div class="form-group">
+                               <input type="text" name="expiry_year" class="form-control" placeholder="Year" />
+                            </div>
+                           <div class="form-group">
+                               <input type="text" name="cvv" class="form-control" placeholder="CVV" />
+                            </div>
+                           <div class="form-group">
+                            <input type="submit" name="submit" class="btn btn-primary" value="Submit" />
+                           </div>
+                       </form>
+                    </div>
+                </div>
+                    </div>
+                    <div class="col-md-3"></div>
+
+         </div>
+     </div>
+
+
 <script type="text/javascript" src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8"></script>
 <script type="text/javascript">
 function sendPaymentDataToAnet() {

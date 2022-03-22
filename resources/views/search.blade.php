@@ -12,8 +12,8 @@
                 <div id="product-1" class="tab-pane active">
                     <div class="row grid">
                         @foreach ($products as $product)
-                        @if ($products->count() == 0)
-                            <h3 class="text-success text-center">No Product(s) Found!</h3>
+                        @if ($products === null)
+                            <h3 class="text-dark text-center">No Product(s) Found!</h3>
                             @else
                             <div class="col-md-3">
                                 <div class="card" style=" ">

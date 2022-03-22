@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 //Product search
 
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'searchproduct'])->name('product.search');
+Route::get('/track-order', function () {
+    return view('track');
+});
 Route::get('/about-us', function () {
     return view('about');
 });

@@ -59,9 +59,9 @@
 
                 <!-- /.social-auth-links -->
 
-                {{-- <p class="mb-1">
+                 <p class="mb-1">
                     <a href="{{ route('password.request') }}">I forgot my password</a>
-                </p> --}}
+                </p> 
                 <p class="mb-0">
                     <a href="{{ url('register') }}" class="text-center" style="color: #891e19">Don't Have an Account</a>
                 </p>

@@ -1,8 +1,10 @@
 <?php
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
 use Omnipay\Omnipay;
 use App\Models\Payment;
+use Darryldecode\Cart\Cart;
+use Illuminate\Http\Request;
+
 class PaymentController extends Controller
 {
     public $gateway;
@@ -22,6 +24,7 @@ class PaymentController extends Controller
 
     public function charge(Request $request)
     {
+        //dd($request->amount);
         try {
             $creditCard = new \Omnipay\Common\CreditCard([
                 'number' => $request->input('cc_number'),
@@ -66,8 +69,12 @@ class PaymentController extends Controller
                     $payment->payment_status = 'Captured';
                     $payment->save();
                 }
+                \Cart::clear();
+                //send mail to customer
 
-                return "Payment is successful. Your transaction id is: ". $transaction_id;
+                   //take user to thank you page
+                   return view('thank_you');
+                // return "Payment is successful. Your transaction id is: ". $transaction_id;
             } else {
                 // not successful
                 return $response->getMessage();

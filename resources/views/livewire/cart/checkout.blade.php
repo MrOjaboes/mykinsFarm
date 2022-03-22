@@ -240,8 +240,8 @@
 
 
                                 <div class="pay-top sin-payment sin-payment-3">
-                                    <input id="payment-method-4" class="input-radio" type="radio" value="Paypal" name="payment_method">
-                                    <label for="payment-method-4">PayPal <img alt="" src="/guest/assets/images/icon-img/payment.png"> </label>
+                                    <input id="payment-method-4" class="input-radio" type="radio" value="Authorize" name="payment_method">
+                                    <label for="payment-method-4">Authorize.Net <img alt="" src="/guest/assets/images/icon-img/payment.png"> </label>
 
                                 </div>
                             </div>
