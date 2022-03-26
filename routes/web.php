@@ -63,6 +63,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //users
    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+   Route::get('/home/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('user.profile');
    Route::get('/checkout', [App\Http\Controllers\OrderController::class, 'create'])->name('checkout');
    Route::post('/checkout', [App\Http\Controllers\OrderController::class, 'store'])->name('checkout');
    //payment using Authorize.net

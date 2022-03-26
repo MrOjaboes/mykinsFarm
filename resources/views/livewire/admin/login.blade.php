@@ -28,12 +28,9 @@
     @enderror
     <div class="row">
         <div class="col-8">
-            {{-- <div class="icheck-primary">
-                <input type="checkbox" id="remember">
-                <label for="remember">
-                    Remember Me
-                </label>
-            </div> --}}
+            <p class="mb-1">
+                <a href="{{ route('password.request') }}">I forgot my password</a>
+            </p> 
         </div>
         <!-- /.col -->
         <div class="col-4">

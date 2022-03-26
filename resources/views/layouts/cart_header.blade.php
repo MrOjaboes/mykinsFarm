@@ -130,6 +130,10 @@
                                                 <a class="dropdown-item" href="{{ route('home') }}">
                                                     <span style="font-size:15px;">Orders</span>
                                                 </a>
+                                                <hr>
+                                                <a class="dropdown-item" href="{{ route('user.profile') }}">
+                                                    <span style="font-size:15px;">Profile</span>
+                                                </a>
                                             </div>
                                         </li>
                                         @endguest

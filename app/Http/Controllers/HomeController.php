@@ -29,6 +29,11 @@ class HomeController extends Controller
 
         return view('home');
     }
+    public function profile()
+    {
+
+        return view('Users.profile');
+    }
 
     public static function GetProductById($product_id){
         //$user = User::first('id', $user_id);
