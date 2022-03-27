@@ -45,4 +45,8 @@ class User extends Authenticatable
     {
        return $this->hasMany(Order::class);
     }
+    public function profile()
+    {
+        return $this->belongsTo(Profile::class,'user_id');
+    }
 }

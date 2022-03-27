@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.user')
 @section('content')
     <x-navbar></x-navbar>
     <div class="content-wrapper">
@@ -85,7 +85,9 @@
                         <div class="card">
                             <div class="card-header p-2">
                                 <ul class="nav nav-pills">
-                                    <li class="nav-item"><a class="nav-link active" href="#details"
+                                    <li class="nav-item"><a class="nav-link active" href="#profile"
+                                            data-toggle="tab">Profile</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#details"
                                             data-toggle="tab">Login Details</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#settings"
                                             data-toggle="tab">Password</a></li>
@@ -94,8 +96,63 @@
                             <div class="card-body">
                                 <div class="tab-content">
 
-                                    <div class="active tab-pane" id="details">
-                                        <form class="form-horizontal" action="{{ route('admin.profile') }}" method="POST">
+                                    <div class="active tab-pane" id="profile">
+                                        @foreach ($profiles as $profile)
+                                        <form class="form-horizontal" action="{{ route('user.profile') }}" method="POST">
+                                            @csrf
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Full Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="name"
+                                                        value="{{ $profile->name }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Address</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="address"
+                                                        value="{{$profile->address }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" name="email"
+                                                        value="{{ $profile->email }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Contact</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="contact"
+                                                        value="{{ $profile->contact }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">State</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="state"
+                                                        value="{{ $profile->state }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">City</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" name="city"
+                                                        value="{{ $profile->city }}">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="offset-sm-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-success">Update Details</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        @endforeach
+                                    </div>
+                                    <div class="tab-pane" id="details">
+                                        <form class="form-horizontal" action="{{ route('update.details') }}" method="POST">
                                             @csrf
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Name</label>
@@ -120,7 +177,8 @@
                                         </form>
                                     </div>
                                     <div class="tab-pane" id="settings">
-                                        <form class="form-horizontal" action="{{ route('update.password') }}" method="POST">
+                                        <form class="form-horizontal" action="{{ route('user.password') }}"
+                                            method="POST">
                                             @csrf
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Current
@@ -167,5 +225,4 @@
         </section>
         <!-- /.content -->
     </div>
-
 @endsection
