@@ -57,7 +57,7 @@ class orderController extends Controller
      $order->items()->attach($item->id,['price'=> $item->price,'quantity'=>$item->quantity]);
         }
         //Payment Method
-        return redirect()->route('payment');
+       // return redirect()->route('payment');
         //clear cart
         \Cart::clear();
      //send mail to customer
